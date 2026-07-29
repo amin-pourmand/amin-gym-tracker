@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "policy": {
     "priority": [
       "Fitamin",
@@ -8,10 +8,13 @@
     ],
     "mustBeExactVariation": true,
     "downloadLocalForOffline": true,
-    "hotlinkAllowedOnlyIfDownloadBlocked": true,
+    "hotlinkAllowedOnlyIfDownloadBlocked": false,
     "sourceCreditRequired": true,
     "noApproximateSubstitutions": true,
-    "manualVisualReviewRequired": true
+    "manualVisualReviewRequired": true,
+    "runtimeExternalUrlsAllowed": false,
+    "youtubeVimeoIframeAllowed": false,
+    "activeAndLibraryDerivedValidation": true
   },
   "items": [
     {
@@ -63,16 +66,6 @@
       "statusRequired": "verified_exact",
       "manualCheck": true,
       "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/d0b33e754f4a9b1cbc1b0e02cefabee138976631-1080p.mp4"
-    },
-    {
-      "guideId": "forward-machine-chest-press",
-      "expectedMovement": "the exact seated/forward machine used in the live app",
-      "sourceName": "بدن‌خوبا",
-      "sourcePage": "https://badankhooba.com/exercise-guides/lever-decline-chest-press/",
-      "statusRequired": "verified_exact",
-      "manualCheck": true,
-      "exactnessNote": "This source is acceptable only if the live machine's handles travel forward/down like a decline lever press. Otherwise preserve the current live exact video or find an exact seated horizontal machine chest press. Never label an incline or lying press as this movement.",
-      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/9cd63e721fce9f5632702124a049246538977018-1080p.mp4"
     },
     {
       "guideId": "pec-deck-fly",
@@ -230,15 +223,6 @@
       "manualCheck": true
     },
     {
-      "guideId": "seated-calf-raise",
-      "expectedMovement": "lever seated calf raise",
-      "sourceName": "بدن‌خوبا",
-      "sourcePage": "https://badankhooba.com/exercise-guides/lever-seated-calf-raise/",
-      "statusRequired": "verified_exact",
-      "manualCheck": true,
-      "directMediaCandidate": "https://badankhooba.com/wp-content/uploads/2023/01/bdba1d88f8593f746bcffaba0c32ffe639145681-1080p.mp4"
-    },
-    {
       "guideId": "single-arm-overhead-cable-triceps",
       "expectedMovement": "single-arm low-cable overhead triceps extension with D handle",
       "sourceName": "بدن‌خوبا",
@@ -335,15 +319,6 @@
       "fallbackSourcePage": "https://badankhooba.com/exercise-guides/lever-preacher-curl/"
     },
     {
-      "guideId": "alternating-dumbbell-curl",
-      "expectedMovement": "standing alternating dumbbell biceps curl",
-      "sourceName": "بدن‌خوبا",
-      "sourcePage": "https://badankhooba.com/exercise-guides/dumbbell-standing-alternate-biceps-curl/",
-      "statusRequired": "verified_exact",
-      "manualCheck": true,
-      "exactnessNote": "Do not substitute a seated clip unless the app exercise name is also changed to seated."
-    },
-    {
       "guideId": "reverse-cable-curl",
       "expectedMovement": "standing reverse-grip cable curl with straight bar",
       "sourceName": "بدن‌خوبا",
@@ -362,6 +337,94 @@
       "manualCheck": true,
       "fallbackSourcePage": "https://physiowinnipeg.com/exercise-library/",
       "exactnessNote": "Reject neck flexion/nodding video; must show horizontal head retraction against/near wall."
+    },
+    {
+      "guideId": "barbell-wrist-curl",
+      "expectedMovement": "palms-up barbell wrist curl with supported forearms",
+      "sourceName": "Amino offline motion guide",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "standing-calf-raise",
+      "expectedMovement": "standing machine calf raise through full ankle range",
+      "sourceName": "Fitamin local download",
+      "sourcePage": "https://fitamin.ir/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "incline-dumbbell-curl",
+      "expectedMovement": "incline bench dumbbell curl with arms behind torso",
+      "sourceName": "Fitamin local download",
+      "sourcePage": "https://fitamin.ir/",
+      "statusRequired": "verified_exact",
+      "manualCheck": true
+    },
+    {
+      "guideId": "seated-calf-raise",
+      "expectedMovement": "seated machine calf raise through full ankle range",
+      "sourceName": "exact local offline media required",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "active"
+    },
+    {
+      "guideId": "hack-squat",
+      "expectedMovement": "machine hack squat with back supported",
+      "sourceName": "Fitamin preferred; exact reputable fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "active"
+    },
+    {
+      "guideId": "bulgarian-split-squat",
+      "expectedMovement": "rear-foot-elevated Bulgarian split squat",
+      "sourceName": "Fitamin preferred; exact reputable fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "replacement"
+    },
+    {
+      "guideId": "dumbbell-heavy-hold",
+      "expectedMovement": "stationary heavy dumbbell hold at sides, no walking and no shrug",
+      "sourceName": "exact reputable local fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "active",
+      "exactnessNote": "Reject farmer walk, shrug, suitcase hold, or any clip using lifting straps."
+    },
+    {
+      "guideId": "machine-or-dumbbell-shrug",
+      "expectedMovement": "machine or dumbbell shrug with straight vertical shoulder elevation",
+      "sourceName": "Fitamin preferred; exact reputable fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "active"
+    },
+    {
+      "guideId": "thoracic-extension",
+      "expectedMovement": "thoracic spine extension over foam roller or suitable support, no neck loading",
+      "sourceName": "exact physiotherapy local fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "posture"
+    },
+    {
+      "guideId": "gentle-chest-stretch",
+      "expectedMovement": "gentle doorway chest stretch without shoulder pain",
+      "sourceName": "exact physiotherapy local fallback",
+      "sourcePage": "",
+      "statusRequired": "verified_exact",
+      "manualCheck": true,
+      "requiredScope": "posture"
     }
   ]
 }
