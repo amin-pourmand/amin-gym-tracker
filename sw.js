@@ -1,9 +1,10 @@
-const CACHE_NAME = 'amino-v14';
+const CACHE_NAME = 'amino-v15';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './final-data.js',
+  './exercise-library.js',
   './media-manifest.js',
   './data/workout-program-final.json',
   './data/exercise-guides-final.json',
@@ -12,7 +13,10 @@ const APP_SHELL = [
   './icon-512.png',
   './chick-mascot.jpg',
   './media/alternating-dumbbell-curl.webp',
+  './media/alternating-dumbbell-curl.mp4',
   './media/barbell-wrist-curl.gif',
+  './media/bayesian-cable-curl.mp4',
+  './media/bird-dog.mp4',
   './media/bulgarian-split-squat.webp',
   './media/cable-crunch.webp',
   './media/cable-external-rotation.gif',
@@ -24,6 +28,8 @@ const APP_SHELL = [
   './media/cable-wrist-curl.webp',
   './media/cable-y-raise.webp',
   './media/chest-supported-h-row.webp',
+  './media/chest-supported-machine-row.mp4',
+  './media/decline-machine-fly.mp4',
   './media/dumbbell-hammer-curl.webp',
   './media/dumbbell-heavy-hold.mp4',
   './media/dumbbell-romanian-deadlift.webp',

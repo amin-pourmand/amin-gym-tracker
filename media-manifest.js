@@ -62,9 +62,14 @@
     'thoracic-extension': local('media/thoracic-extension.mp4', 'MakeAGIF', 'Thoracic Extension with a Foam Roller'),
     'gentle-chest-stretch': local('media/gentle-chest-stretch.mp4', 'SurgiStretch', 'Doorway Arm Stretches'),
 
+    'bayesian-cable-curl': local('media/bayesian-cable-curl.mp4', 'Amino Offline', 'Bayesian Cable Curl'),
+    'bird-dog': local('media/bird-dog.mp4', 'Amino Offline', 'Bird Dog'),
+    'chest-supported-machine-row': local('media/chest-supported-machine-row.mp4', 'Amino Offline', 'Chest Supported Machine Row'),
+    'decline-machine-fly': local('media/decline-machine-fly.mp4', 'Amino Offline', 'Decline Machine Fly'),
+
     'forward-machine-chest-press': local('media/seated-machine-chest-press.webp', 'فیتامین', 'پرس سینه دستگاه روبه‌جلو', { legacyOnly: true }),
-    'cable-pull-through': local('media/cable-pull-through.webp', 'بدن‌خوبا', 'پول‌ترو سیمکش', { legacyOnly: true }),
-    'alternating-dumbbell-curl': local('media/alternating-dumbbell-curl.webp', 'بدن‌خوبا', 'جلو بازو تناوبی دمبل', { legacyOnly: true }),
-    'barbell-wrist-curl': local('media/barbell-wrist-curl.gif', 'Exercise Gym GIFs DB', 'Barbell Palms Up Wrist Curl Over A Bench', { legacyOnly: true })
+    'cable-pull-through': local('media/cable-pull-through.webp', 'بدن‌خوبا', 'پول‌ترو سیمکش'),
+    'alternating-dumbbell-curl': local('media/alternating-dumbbell-curl.mp4', 'Amino Offline', 'Alternating Dumbbell Curl'),
+    'barbell-wrist-curl': local('media/barbell-wrist-curl.gif', 'Exercise Gym GIFs DB', 'Barbell Palms Up Wrist Curl Over A Bench')
   };
 })();
