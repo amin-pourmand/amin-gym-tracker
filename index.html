@@ -81,7 +81,9 @@ header{position:sticky;top:0;z-index:20;margin:-14px -14px 0;padding:calc(12px +
 <div id="exercisePicker" class="picker" role="dialog" aria-modal="true" aria-label="افزودن حرکت از دیتابیس" onclick="if(event.target===this)closeExercisePicker()"><div class="picker-card"><div class="picker-head"><div><h3>افزودن حرکت</h3><p>حرکت را از دیتابیس آفلاین Amino انتخاب کن.</p><span id="exercisePickerCount" class="picker-count"></span></div><button class="picker-close" type="button" aria-label="بستن" onclick="closeExercisePicker()">×</button></div><input id="exerciseSearch" class="picker-search" type="search" placeholder="جست‌وجوی نام، عضله یا وسیله…" oninput="renderExercisePicker(this.value)"><div id="exerciseFilters" class="picker-filters"></div><div id="exercisePickerList" class="picker-list"></div></div></div>
 <script src="./final-data.js"></script>
 <script src="./exercise-library.js"></script>
+<script src="./exercise-library-expanded.js"></script>
 <script src="./media-manifest.js"></script>
+<script src="./media-manifest-expanded.js"></script>
 <script>
 const FINAL_PROGRAM=window.FINAL_WORKOUT_PROGRAM;
 const EXECUTION_GUIDES={...(window.EXERCISE_GUIDES||{}),...(window.OFFLINE_EXERCISE_GUIDES||{})};
@@ -393,7 +395,7 @@ function loadExerciseMedia(shell){
   };
   const failed=()=>{shell.innerHTML='<div class="media-empty media-error">راهنمای تصویری بارگذاری نشد؛ توضیح اجرای زیر همچنان در دسترس است.</div>'};
   if(entry.kind==='video'||/\.mp4(?:$|\?)/i.test(entry.file)){
-    const video=document.createElement('video');video.className='media-visual';video.src=entry.file;video.playsInline=true;video.controls=true;video.preload='metadata';video.onerror=failed;loading.replaceWith(video);addMeta();return;
+    const video=document.createElement('video');video.className='media-visual';video.src=entry.file;video.playsInline=true;video.controls=true;video.muted=true;video.loop=true;video.autoplay=true;video.preload='metadata';video.disablePictureInPicture=true;video.onerror=failed;loading.replaceWith(video);video.play().catch(()=>{});addMeta();return;
   }
   const img=document.createElement('img');img.className='media-visual';img.alt='راهنمای تصویری '+(shell.dataset.mediaName||'حرکت');img.decoding='async';img.onerror=failed;img.src=entry.file;loading.replaceWith(img);addMeta();
 }

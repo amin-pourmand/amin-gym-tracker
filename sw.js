@@ -1,11 +1,16 @@
-const CACHE_NAME = 'amino-v15';
+importScripts('./media-cache-list.js');
+
+const CACHE_NAME = 'amino-v16';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './final-data.js',
   './exercise-library.js',
+  './exercise-library-expanded.js',
   './media-manifest.js',
+  './media-manifest-expanded.js',
+  './media-cache-list.js',
   './data/workout-program-final.json',
   './data/exercise-guides-final.json',
   './data/exercise-media-targets-final.json',
@@ -65,7 +70,8 @@ const APP_SHELL = [
   './media/straight-bar-triceps-pushdown.webp',
   './media/thoracic-extension.mp4',
   './media/wall-chin-tuck.svg',
-  './media/wall-slide.gif'
+  './media/wall-slide.gif',
+  ...globalThis.AMINO_EXPANDED_MEDIA_FILES
 ];
 
 self.addEventListener('install', event => {
