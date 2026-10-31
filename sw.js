@@ -1,12 +1,12 @@
 importScripts('./media-cache-list.js');
 
-const CACHE_NAME = 'amino-v17-three-day';
+const CACHE_NAME = 'amino-v18-block2-cba';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './final-data.js',
-  './final-data.js?v=20261017-three-day',
+  './final-data.js?v=20261031-block2-cba',
   './exercise-library.js',
   './exercise-library-expanded.js',
   './media-manifest.js',
@@ -14,6 +14,8 @@ const APP_SHELL = [
   './media-cache-list.js',
   './data/workout-program-final.json',
   './data/workout-program-legacy-2026-07.json',
+  './data/workout-program-block1-2026-10-17.json',
+  './data/block2-exercise-mapping.json',
   './data/exercise-guides-final.json',
   './data/exercise-media-targets-final.json',
   './icon-192.png',

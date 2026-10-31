@@ -1,0 +1,1046 @@
+{
+  "schemaVersion": 6,
+  "programVersion": "2026-10-17-three-day-74",
+  "rules": {
+    "trainingDayIds": [
+      "sun",
+      "tue",
+      "fri"
+    ],
+    "restDays": [
+      "sat",
+      "mon",
+      "wed",
+      "thu"
+    ],
+    "optionalDaysCountTowardProgram": false,
+    "warmupsCountTowardWorkingSets": false,
+    "postureRoutineCountsTowardWorkingSets": false,
+    "postureRoutineCountsTowardCompletion": false,
+    "expectedWeeklyWorkingSets": 74,
+    "weeklyTotalMustBeDerivedFromExercises": true,
+    "oneSidedWorkingSetRule": "یک دور کامل چپ و راست، یک ست کاری محسوب می‌شود.",
+    "weekCompletion": {
+      "basis": "completed_working_sets",
+      "defaultDenominatorSource": "selected_week_snapshot",
+      "defaultProgramDenominator": 74,
+      "excludeWarmups": true,
+      "excludeRestDays": true,
+      "excludePostureRoutine": true,
+      "recalculateSelectedWeekAfterUserEdits": true,
+      "preservePastWeekSnapshots": true
+    },
+    "newWeek": {
+      "startWithBlankInputs": true,
+      "neverPrefillFromPreviousWeek": true,
+      "previousSessionReadOnly": true,
+      "previousSessionMustNotCreateDraft": true,
+      "draftsAreIsolatedByWeekAndDay": true,
+      "preserveSubmittedHistory": true
+    },
+    "userEditing": {
+      "allowSetCountChange": true,
+      "allowExerciseDelete": true,
+      "allowOfflineLibraryExerciseAdd": true,
+      "allowExerciseReorder": true,
+      "scope": "selected_week_snapshot_only"
+    },
+    "completionEffect": {
+      "triggerAtPercent": 100,
+      "triggerMode": "first_transition_to_complete",
+      "oncePerWeek": true,
+      "mustNotInterruptPersistence": true
+    },
+    "legacyGuideIds": [
+      "forward-machine-chest-press",
+      "cable-pull-through",
+      "seated-calf-raise",
+      "alternating-dumbbell-curl",
+      "barbell-wrist-curl"
+    ]
+  },
+  "intensityRules": {
+    "compound": {
+      "targetRir": "۱ تا ۳",
+      "examples": [
+        "پرس‌ها",
+        "پرس پا",
+        "هاک‌اسکوات",
+        "ددلیفت رومانیایی",
+        "دیپ",
+        "حرکات اصلی پشت"
+      ],
+      "rules": [
+        "بیشتر ست‌ها با ۱ تا ۳ تکرار ذخیره تمام شوند.",
+        "به‌طور دائمی تا ناتوانی کامل اجرا نشوند.",
+        "فرم صحیح بر افزایش وزنه اولویت دارد."
+      ]
+    },
+    "isolation": {
+      "targetRir": "۱ تا ۲",
+      "examples": [
+        "نشر",
+        "فلای",
+        "جلو بازو",
+        "پشت‌بازو",
+        "ساعد",
+        "ساق",
+        "جلوپا",
+        "پشت‌پا"
+      ],
+      "rules": [
+        "بیشتر ست‌ها با ۱ تا ۲ تکرار ذخیره تمام شوند.",
+        "فقط آخرین ست حرکات دستگاهی یا سیمکش کم‌خطر، در صورت حفظ فرم، می‌تواند به صفر تا یک تکرار ذخیره برسد."
+      ]
+    },
+    "coreAndPosture": {
+      "stopRule": "ست زمانی متوقف شود که اجرای صحیح و کنترل ستون فقرات یا لگن در حال ازبین‌رفتن باشد، نه صرفاً زمانی که عدد تکرار تکمیل شده است."
+    },
+    "rirDefinitions": {
+      "0": "تکرار صحیح دیگری ممکن نبود.",
+      "1": "فقط یک تکرار صحیح دیگر ممکن بود.",
+      "2": "حدود دو تکرار صحیح دیگر ممکن بود.",
+      "3": "حدود سه تکرار صحیح دیگر ممکن بود."
+    }
+  },
+  "doubleProgression": {
+    "appliesTo": "تمام حرکات تکراری",
+    "exampleRange": "۳×۸–۱۲",
+    "steps": [
+      "با یک وزنه مشخص در بازه تعیین‌شده تمرین کن.",
+      "تا زمانی که همه ست‌ها به سقف بازه نرسیده‌اند، وزنه را حفظ کن.",
+      "وقتی همه ست‌ها با فرم صحیح به سقف بازه رسیدند و RIR تعیین‌شده حفظ شد، جلسه بعد وزنه را افزایش بده.",
+      "پس از افزایش وزنه، بازگشت تکرارها به بخش پایین بازه طبیعی است."
+    ],
+    "loadIncrease": {
+      "largeMovements": "حدود ۲٫۵ تا ۵ درصد",
+      "lateralRaiseArmsForearms": "کوچک‌ترین افزایش ممکن",
+      "largeMachineJump": "ابتدا تکرار، مکث یا کیفیت اجرا افزایش پیدا کند."
+    },
+    "timedHold": {
+      "guideId": "dumbbell-heavy-hold",
+      "progression": "ابتدا مدت هر دو ست به ۴۵ ثانیه برسد؛ سپس کوچک‌ترین افزایش وزنه انجام شود."
+    }
+  },
+  "deload": {
+    "usualProgressionWeeks": "۵ تا ۷ هفته",
+    "suggestWhenAtLeast": 2,
+    "triggers": [
+      "افت وزنه یا تکرار در دو جلسه متوالی",
+      "افزایش درد مچ، آرنج، زانو یا شانه",
+      "باقی‌ماندن خستگی تا جلسه بعد",
+      "افت محسوس کیفیت خواب",
+      "کاهش واضح انگیزه تمرین",
+      "ناتوانی در حفظ RIR تعیین‌شده",
+      "سنگین‌شدن غیرعادی وزنه‌های همیشگی"
+    ],
+    "protocol": {
+      "setReductionPercent": "۴۰ تا ۵۰ درصد",
+      "loadReductionPercent": "۱۰ تا ۱۵ درصد",
+      "targetRir": "۳ تا ۴",
+      "noFailureSets": true
+    },
+    "appBehavior": {
+      "maySuggestFromPerformancePainFatigue": true,
+      "mayChangeProgramWithoutUserApproval": false
+    }
+  },
+  "volumeTargets": {
+    "chestDirect": 10,
+    "backAndLatsDirect": 8,
+    "lateralDeltsDirect": 6,
+    "rearDeltsAndScapularControlDirect": 5,
+    "tricepsDirect": 6,
+    "tricepsLongHeadOverhead": 3,
+    "bicepsBrachialisBrachioradialisDirect": 9,
+    "forearmsAndGripDirect": 4,
+    "absAndObliques": 6,
+    "quadricepsDirect": 6,
+    "hamstringsDirect": 6,
+    "calvesDirect": 6,
+    "calvesSessions": 2
+  },
+  "validation": {
+    "expectedWorkingSetsByDay": {
+      "sun": 25,
+      "tue": 22,
+      "fri": 27
+    },
+    "expectedWeeklyWorkingSets": 74,
+    "calculateFrom": "days[type=training].exercises[].sets",
+    "volumeCreditSource": "exercises[].volumeCredits",
+    "volumeTargetFields": [
+      "chestDirect",
+      "backAndLatsDirect",
+      "lateralDeltsDirect",
+      "rearDeltsAndScapularControlDirect",
+      "tricepsDirect",
+      "tricepsLongHeadOverhead",
+      "bicepsBrachialisBrachioradialisDirect",
+      "forearmsAndGripDirect",
+      "absAndObliques",
+      "quadricepsDirect",
+      "hamstringsDirect",
+      "calvesDirect"
+    ]
+  },
+  "days": [
+    {
+      "id": "sat",
+      "dayFa": "شنبه",
+      "type": "rest",
+      "title": "ریکاوری و روتین سبک پاسچر",
+      "note": "روتین سبک پاسچر در روزهای بدون باشگاه؛ سه روز کامل کوتاه، روز چهارم آسان‌تر یا استراحت. انجام‌ندادن آن درصد تمرین اصلی را کم نمی‌کند."
+    },
+    {
+      "id": "sun",
+      "dayFa": "یکشنبه",
+      "type": "training",
+      "title": "A — سرشانه و سینه، مکمل پشت و دست",
+      "subtitle": "سه جلسه غیرمتوالی؛ فرم و ریکاوری بر افزایش وزنه اولویت دارند.",
+      "totalWorkingSets": 25,
+      "warmup": [
+        {
+          "id": "warm-v3-sun-0",
+          "name": "هوازی سبک",
+          "dose": "۵–۷ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-sun-1",
+          "name": "اولین پرس سبک",
+          "dose": "۲–۳ ست افزایشی",
+          "guideId": "machine-shoulder-press",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-sun-2",
+          "name": "زیربغل سبک",
+          "dose": "۱–۲ ست افزایشی",
+          "guideId": "chest-supported-h-row",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "v3_sun_01",
+          "order": 1,
+          "name": "پرس سرشانه دستگاه",
+          "muscleGroup": "سرشانه",
+          "sets": 2,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "machine-shoulder-press",
+          "volumeCredits": {},
+          "note": "فقط در اجرای کاملاً بدون علامت؛ حرکت شناخته‌شده علامت‌دار فعلاً حذف شود. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+        },
+        {
+          "id": "v3_sun_02",
+          "order": 2,
+          "name": "پرس بالاسینه دمبل",
+          "muscleGroup": "سینه بالایی",
+          "sets": 3,
+          "reps": "۶–۱۰",
+          "restSec": "۱۵۰–۱۸۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "note": "مچ تقریباً در امتداد ساعد، دسته نزدیک پایه کف دست؛ شیب حدود ۲۰–۳۰ درجه و وزنه قابل‌کنترل. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است.",
+          "guideId": "incline-dumbbell-press",
+          "volumeCredits": {
+            "chestDirect": 3
+          }
+        },
+        {
+          "id": "v3_sun_03",
+          "order": 3,
+          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
+          "muscleGroup": "پشت؛ ضخامت",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "chest-supported-h-row",
+          "volumeCredits": {
+            "backAndLatsDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_04",
+          "order": 4,
+          "name": "نشر جانب دستگاه",
+          "muscleGroup": "سرشانه کناری",
+          "sets": 3,
+          "reps": "۱۲–۲۰",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "machine-lateral-raise",
+          "volumeCredits": {
+            "lateralDeltsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_05",
+          "order": 5,
+          "name": "پرس سینه دستگاه خوابیده",
+          "muscleGroup": "سینه",
+          "sets": 2,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰–۱۵۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "note": "",
+          "guideId": "lying-machine-chest-press",
+          "volumeCredits": {
+            "chestDirect": 2
+          }
+        },
+        {
+          "id": "v3_sun_06",
+          "order": 6,
+          "name": "فلای سینه دستگاه",
+          "muscleGroup": "سینه",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "pec-deck-fly",
+          "volumeCredits": {
+            "chestDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_07",
+          "order": 7,
+          "name": "فلای‌بک دستگاه",
+          "muscleGroup": "سرشانه خلفی",
+          "sets": 2,
+          "reps": "۱۲–۲۰",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "reverse-pec-deck",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_08",
+          "order": 8,
+          "name": "پشت‌بازو طناب بالای سر، پشت به سیمکش",
+          "muscleGroup": "پشت‌بازو؛ تأکید سر بلند",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰–۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "طناب",
+          "guideId": "overhead-rope-triceps-extension",
+          "volumeCredits": {
+            "tricepsDirect": 3,
+            "tricepsLongHeadOverhead": 3
+          },
+          "note": "فقط بدون علامت؛ در صورت نیاز پوش‌داون طنابِ بدون علامت جای همین سه ست، نه اضافه بر آن. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+        },
+        {
+          "id": "v3_sun_09",
+          "order": 9,
+          "name": "جلو بازو لاری دستگاه",
+          "muscleGroup": "جلو بازو",
+          "sets": 2,
+          "reps": "۸–۱۲",
+          "restSec": "۹۰–۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "machine-preacher-curl",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_10",
+          "order": 10,
+          "name": "جلو بازو چکشی دمبل",
+          "muscleGroup": "جلو بازو، براکیالیس و براکیورادیالیس",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "dumbbell-hammer-curl",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_sun_11",
+          "order": 11,
+          "name": "مچ سیمکش از زیر",
+          "muscleGroup": "ساعد",
+          "sets": 2,
+          "reps": "۱۵–۲۰",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "میله صاف کوتاه",
+          "guideId": "cable-wrist-curl",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "note": "ساعد روی تکیه‌گاه؛ وزنه سبک و حرکت کنترل‌شده از مچ. بعد از دو هفته فقط با ریکاوری مناسب و بدون گزگز، افزایش دستی به ۳ ست قابل بررسی است. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+        }
+      ]
+    },
+    {
+      "id": "mon",
+      "dayFa": "دوشنبه",
+      "type": "rest",
+      "title": "ریکاوری و روتین سبک پاسچر",
+      "note": "روتین سبک پاسچر در روزهای بدون باشگاه؛ سه روز کامل کوتاه، روز چهارم آسان‌تر یا استراحت. انجام‌ندادن آن درصد تمرین اصلی را کم نمی‌کند."
+    },
+    {
+      "id": "tue",
+      "dayFa": "سه‌شنبه",
+      "type": "training",
+      "title": "B — پا، ساق، شکم و ساعد",
+      "subtitle": "سه جلسه غیرمتوالی؛ فرم و ریکاوری بر افزایش وزنه اولویت دارند.",
+      "totalWorkingSets": 22,
+      "warmup": [
+        {
+          "id": "warm-v3-tue-0",
+          "name": "هوازی سبک",
+          "dose": "۵–۷ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-tue-1",
+          "name": "هاک‌اسکوات سبک",
+          "dose": "۲–۳ ست افزایشی",
+          "guideId": "hack-squat",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-tue-2",
+          "name": "رومانیایی سبک",
+          "dose": "۲ ست افزایشی",
+          "guideId": "dumbbell-rdl",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "v3_tue_01",
+          "order": 1,
+          "name": "هاک‌اسکوات دستگاه",
+          "muscleGroup": "چهارسر و باسن",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "alternative": {
+            "id": "v3_leg_press_alternative",
+            "order": 4,
+            "name": "پرس پا دستگاه",
+            "muscleGroup": "چهارسر و پایین‌تنه",
+            "sets": 3,
+            "reps": "۸–۱۲",
+            "restSec": "۱۵۰–۱۸۰",
+            "targetRir": "۱–۳",
+            "inputType": "reps",
+            "tracking": {
+              "showWeight": true,
+              "showReps": true,
+              "showRir": true,
+              "allowNotes": true
+            },
+            "guideId": "seated-leg-press",
+            "volumeCredits": {
+              "quadricepsDirect": 4
+            }
+          },
+          "guideId": "hack-squat",
+          "volumeCredits": {
+            "quadricepsDirect": 3
+          },
+          "note": "اگر هاک موجود یا راحت نیست، پرس پا جای همین سه ست اجرا شود؛ هردو را با هم اضافه نکن. کف پا پایدار و دامنه کنترل‌شده باشد."
+        },
+        {
+          "id": "v3_tue_02",
+          "order": 2,
+          "name": "ددلیفت رومانیایی دمبل",
+          "muscleGroup": "همسترینگ و باسن",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "dumbbell-rdl",
+          "volumeCredits": {
+            "hamstringsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_tue_03",
+          "order": 3,
+          "name": "پشت‌پا دستگاه خوابیده",
+          "muscleGroup": "همسترینگ",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰–۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "lying-leg-curl",
+          "volumeCredits": {
+            "hamstringsDirect": 3
+          },
+          "note": "در صورت وجود دستگاه پشت‌پا نشسته مناسب می‌توان همان را از بانک جایگزین کرد؛ رسانه فعلی دقیقاً نسخه خوابیده است."
+        },
+        {
+          "id": "v3_tue_04",
+          "order": 4,
+          "name": "جلوپا دستگاه",
+          "muscleGroup": "چهارسر",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "leg-extension",
+          "volumeCredits": {
+            "quadricepsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_tue_05",
+          "order": 5,
+          "name": "ساق نشسته دستگاه",
+          "muscleGroup": "ساق",
+          "sets": 4,
+          "reps": "۱۲–۲۰",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "note": "نسخه فعلی با دستگاه موجود ساق نشسته است؛ بدون جهش، مکث کوتاه پایین و بالا. ساق پرس پا بدون بررسی دستگاه و آموزش حضوری اجرا نشود.",
+          "guideId": "seated-calf-raise",
+          "volumeCredits": {
+            "calvesDirect": 4
+          }
+        },
+        {
+          "id": "v3_tue_06",
+          "order": 6,
+          "name": "ریورس کرانچ",
+          "muscleGroup": "شکم",
+          "sets": 2,
+          "reps": "۱۲–۲۰",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "توقف پیش از افت فرم",
+          "inputType": "bodyweight",
+          "tracking": {
+            "showWeight": false,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "reverse-crunch",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_tue_07",
+          "order": 7,
+          "name": "پالوف پرس سیمکش",
+          "muscleGroup": "میان‌تنه؛ ضدچرخش",
+          "sets": 2,
+          "reps": "۱۰–۱۵ هر طرف",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "دسته D",
+          "unilateral": {
+            "mode": "paired",
+            "sides": [
+              "left",
+              "right"
+            ],
+            "workingSetCounting": "pair_is_one_set",
+            "allowSharedValue": true,
+            "allowSideNotes": true
+          },
+          "note": " هر دور کامل چپ و راست یک ست است.",
+          "guideId": "cable-pallof-press",
+          "volumeCredits": {
+            "absAndObliques": 2
+          }
+        },
+        {
+          "id": "v3_tue_08",
+          "order": 8,
+          "name": "مچ سیمکش معکوس",
+          "muscleGroup": "ساعد",
+          "sets": 2,
+          "reps": "۱۵–۲۰",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "میله صاف کوتاه",
+          "guideId": "cable-reverse-wrist-curl",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "note": "ساعد روی تکیه‌گاه؛ وزنه سبک و حرکت کنترل‌شده از مچ. بعد از دو هفته فقط با ریکاوری مناسب و بدون گزگز، افزایش دستی به ۳ ست قابل بررسی است. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+        }
+      ]
+    },
+    {
+      "id": "wed",
+      "dayFa": "چهارشنبه",
+      "type": "rest",
+      "title": "ریکاوری و روتین سبک پاسچر",
+      "note": "روتین سبک پاسچر در روزهای بدون باشگاه؛ سه روز کامل کوتاه، روز چهارم آسان‌تر یا استراحت. انجام‌ندادن آن درصد تمرین اصلی را کم نمی‌کند."
+    },
+    {
+      "id": "thu",
+      "dayFa": "پنجشنبه",
+      "type": "rest",
+      "title": "ریکاوری و روتین سبک پاسچر",
+      "estimatedMinutes": "۹۰ تا ۱۰۵ دقیقه",
+      "note": "روتین سبک پاسچر در روزهای بدون باشگاه؛ سه روز کامل کوتاه، روز چهارم آسان‌تر یا استراحت. انجام‌ندادن آن درصد تمرین اصلی را کم نمی‌کند."
+    },
+    {
+      "id": "fri",
+      "dayFa": "جمعه",
+      "type": "training",
+      "title": "C — پشت، بالاسینه مکمل، سرشانه و بازو",
+      "subtitle": "سه جلسه غیرمتوالی؛ فرم و ریکاوری بر افزایش وزنه اولویت دارند.",
+      "totalWorkingSets": 27,
+      "warmup": [
+        {
+          "id": "warm-v3-fri-0",
+          "name": "هوازی سبک",
+          "dose": "۵–۷ دقیقه",
+          "guideId": "light-cardio",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-fri-1",
+          "name": "بالاسینه دستگاه سبک",
+          "dose": "۲–۳ ست افزایشی",
+          "guideId": "incline-machine-chest-press",
+          "mediaRequired": false
+        },
+        {
+          "id": "warm-v3-fri-2",
+          "name": "زیربغل سبک",
+          "dose": "۱–۲ ست افزایشی",
+          "guideId": "chest-supported-h-row",
+          "mediaRequired": false
+        }
+      ],
+      "exercises": [
+        {
+          "id": "v3_fri_01",
+          "order": 1,
+          "name": "پرس بالاسینه دستگاه",
+          "muscleGroup": "سینه بالایی",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۵۰–۱۸۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "incline-machine-chest-press",
+          "volumeCredits": {
+            "chestDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_02",
+          "order": 2,
+          "name": "زیربغل سیمکش از جلو",
+          "muscleGroup": "زیربغل",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰–۱۵۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "میله بلند با گیرش متوسط",
+          "guideId": "front-lat-pulldown",
+          "volumeCredits": {
+            "backAndLatsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_03",
+          "order": 3,
+          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
+          "muscleGroup": "پشت؛ ضخامت",
+          "sets": 3,
+          "reps": "۸–۱۲",
+          "restSec": "۱۲۰–۱۵۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "chest-supported-h-row",
+          "volumeCredits": {
+            "backAndLatsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_04",
+          "order": 4,
+          "name": "نشر جانب سیمکش تک‌دست",
+          "muscleGroup": "سرشانه کناری",
+          "sets": 3,
+          "reps": "۱۲–۲۰ هر طرف",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "کاف مچ یا دسته D",
+          "unilateral": {
+            "mode": "paired",
+            "sides": [
+              "left",
+              "right"
+            ],
+            "workingSetCounting": "pair_is_one_set",
+            "allowSharedValue": true,
+            "allowSideNotes": true
+          },
+          "note": " هر دور کامل چپ و راست یک ست است.",
+          "guideId": "single-arm-cable-lateral-raise",
+          "volumeCredits": {
+            "lateralDeltsDirect": 3
+          }
+        },
+        {
+          "id": "v3_fri_05",
+          "order": 5,
+          "name": "فیس‌پول سیمکش",
+          "muscleGroup": "سرشانه خلفی و کنترل کتف",
+          "sets": 3,
+          "reps": "۱۵–۲۰",
+          "restSec": "۷۵–۹۰",
+          "targetRir": "۲–۳",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "طناب",
+          "guideId": "cable-face-pull",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 3
+          },
+          "note": "طناب به سمت پیشانی و دست‌ها دو سوی صورت؛ گردن جلو نیاید، کمر گود نشود؛ با بار سبک و ۲–۳ تکرار ذخیره. اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+        },
+        {
+          "id": "v3_fri_06",
+          "order": 6,
+          "name": "جلو بازو دمبل روی میز شیب‌دار",
+          "muscleGroup": "جلو بازو؛ تأکید سر بلند",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰–۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "دو دمبل؛ نیمکت با شیب ۴۵ تا ۶۰ درجه",
+          "guideId": "incline-dumbbell-curl",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_07",
+          "order": 7,
+          "name": "پشت‌بازو سیمکش با میله صاف",
+          "muscleGroup": "پشت‌بازو",
+          "sets": 3,
+          "reps": "۱۰–۱۵",
+          "restSec": "۹۰–۱۲۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "میله صاف کوتاه",
+          "guideId": "straight-bar-triceps-pushdown",
+          "volumeCredits": {
+            "tricepsDirect": 3
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_08",
+          "order": 8,
+          "name": "جلو بازو معکوس سیمکش",
+          "muscleGroup": "براکیورادیالیس، براکیالیس و ساعد",
+          "sets": 2,
+          "reps": "۱۲–۱۵",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "میله صاف کوتاه",
+          "guideId": "reverse-cable-curl",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "note": ""
+        },
+        {
+          "id": "v3_fri_09",
+          "order": 9,
+          "name": "ساق نشسته دستگاه",
+          "muscleGroup": "ساق",
+          "sets": 2,
+          "reps": "۱۲–۲۰",
+          "restSec": "۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "note": "نسخه فعلی با دستگاه موجود ساق نشسته است؛ بدون جهش، مکث کوتاه پایین و بالا. ساق پرس پا بدون بررسی دستگاه و آموزش حضوری اجرا نشود.",
+          "guideId": "seated-calf-raise",
+          "volumeCredits": {
+            "calvesDirect": 2
+          }
+        },
+        {
+          "id": "v3_fri_10",
+          "order": 10,
+          "name": "کرانچ سیمکش",
+          "muscleGroup": "شکم",
+          "sets": 2,
+          "reps": "۱۰–۱۵",
+          "restSec": "۶۰–۹۰",
+          "targetRir": "۱–۲",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "attachment": "طناب",
+          "guideId": "cable-kneeling-crunch",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "postureRoutine": {
+    "id": "posture-routine",
+    "title": "پاسچر روزهای بدون باشگاه",
+    "recommendedFrequency": "روزهای بدون باشگاه؛ سه روز کامل کوتاه و روز چهارم سبک‌تر",
+    "countTowardWorkingSets": false,
+    "countTowardWeeklyCompletion": false,
+    "note": "روتین سبک ۵–۸ دقیقه‌ای؛ تا ناتوانی نرو. با درد، گزگز یا سرگیجه حرکت را قطع کن. این روتین و فیس‌پول درمان تضمینی پاسچر نیستند.",
+    "items": [
+      {
+        "id": "posture-chin-tuck",
+        "name": "چین‌تاک ملایم",
+        "dose": "۱–۲ ست × ۸ تکرار، مکث ۳ ثانیه",
+        "guideId": "wall-chin-tuck",
+        "inputType": "bodyweight",
+        "mediaRequired": true
+      },
+      {
+        "id": "posture-wall-slide",
+        "name": "وال‌اسلاید",
+        "dose": "۱–۲ ست × ۸–۱۲؛ بدون گودکردن کمر",
+        "guideId": "wall-slide",
+        "inputType": "bodyweight",
+        "mediaRequired": true
+      },
+      {
+        "id": "posture-thoracic-extension",
+        "name": "بازکردن آرام ستون سینه‌ای",
+        "dose": "۶–۸ تکرار آرام؛ بدون فشار روی گردن",
+        "guideId": "thoracic-extension",
+        "inputType": "bodyweight",
+        "mediaRequired": true
+      }
+    ]
+  },
+  "effectiveWeekKey": "2026-10-17",
+  "trainingNotes": {
+    "returnToTraining": "بازگشت بعد از وقفه: هفته اول حرکات اصلی حداکثر ۲ ست و ایزوله‌ها یک ست با ۳–۴ تکرار ذخیره؛ هفته دوم حدود دو سوم حجم؛ هفته سوم یا چهارم در صورت ریکاوری مناسب حجم کامل. کم‌کردن ست از منوی سه‌نقطه فقط روی همین هفته اعمال می‌شود.",
+    "forearmProgression": "دو هفته اول همان مقدار پایه. پس از آن فقط اگر مچ و آرنج ریکاور و بدون گزگز بودند، مچ از زیر و مچ معکوس را هرکدام از منوی سه‌نقطه به ۳ ست برسان؛ این افزایش خودکار نیست.",
+    "symptoms": "اگر گزگز یا سوزش ایجاد شد، ست را قطع کن و این حرکت را همان روز ادامه نده؛ با تکرار علائم ارزیابی حضوری لازم است."
+  }
+}
