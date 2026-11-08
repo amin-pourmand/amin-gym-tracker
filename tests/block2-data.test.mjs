@@ -13,7 +13,7 @@ vm.runInContext(fs.readFileSync(path.join(root,'sw.js'),'utf8')+'\nglobalThis.pr
 const p=c.window.FINAL_WORKOUT_PROGRAM,byId=id=>p.days.find(d=>d.id===id);
 
 test('CBA v3 has 82 derived sets with both hack squat and leg press',()=>{
- assert.equal(p.programVersion,'2026-11-14-cba-82');assert.equal(p.effectiveWeekKey,'2026-11-14');
+ assert.equal(p.programVersion,'2026-11-07-cba-82');assert.equal(p.effectiveWeekKey,'2026-11-07');
  assert.deepEqual(Array.from(p.rules.trainingDayIds),['sun','tue','fri']);
  const expected={sun:{code:'C',sets:28,count:13,first:'chest-supported-h-row',last:'cable-rear-delt-fly'},tue:{code:'B',sets:29,count:13,first:'incline-machine-chest-press',last:'cable-pallof-press'},fri:{code:'A',sets:25,count:10,first:'machine-shoulder-press',last:'high-to-low-cable-woodchopper'}};
  for(const [id,x] of Object.entries(expected)){const d=byId(id);assert.equal(d.sessionCode,x.code);assert.equal(d.totalWorkingSets,x.sets);assert.equal(d.exercises.length,x.count);assert.equal(d.exercises[0].guideId,x.first);assert.equal(d.exercises.at(-1).guideId,x.last);assert.equal(d.exercises.reduce((n,e)=>n+e.sets,0),x.sets)}
@@ -28,6 +28,8 @@ test('past program versions remain available and the new week is blank by design
  const prior=JSON.parse(fs.readFileSync(path.join(root,'data/workout-program-block3-2026-11-07.json'),'utf8'));
  assert.equal(prior.programVersion,'2026-11-07-cba-79');assert.equal(prior.validation.expectedWeeklyWorkingSets,79);
  assert.equal(c.window.WORKOUT_PROGRAM_VERSIONS[prior.programVersion].validation.expectedWeeklyWorkingSets,79);
+ const current=Object.values(c.window.WORKOUT_PROGRAM_VERSIONS).filter(x=>x.effectiveWeekKey<='2026-11-07').sort((a,b)=>b.effectiveWeekKey.localeCompare(a.effectiveWeekKey)||b.programVersion.localeCompare(a.programVersion))[0];
+ assert.equal(current.programVersion,p.programVersion,'same-week new plan wins over the preserved 79-set archive');
  assert.equal(p.rules.newWeek.startWithBlankInputs,true);assert.equal(p.rules.newWeek.preserveSubmittedHistory,true);
 });
 

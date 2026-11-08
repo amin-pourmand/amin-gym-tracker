@@ -1,12 +1,12 @@
 importScripts('./media-cache-list.js');
 
-const CACHE_NAME = 'amino-v20-block3-leg-press';
+const CACHE_NAME = 'amino-v21-block3-leg-press-now';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './final-data.js',
-  './final-data.js?v=20261114-cba-82',
+  './final-data.js?v=20261107-cba-82',
   './exercise-library.js',
   './exercise-library-expanded.js',
   './media-manifest.js',
