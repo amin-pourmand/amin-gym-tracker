@@ -38,7 +38,7 @@ await page.evaluate(()=>window.openWeek('2026-10-31'));assert.equal(await page.e
 assert.ok(await page.evaluate(()=>eval('EXERCISE_LIBRARY.length'))>=bankBefore);
 await page.evaluate(()=>window.openDay('sun'));assert.equal(await page.locator('.ex').count(),13);
 const hold=page.locator('.ex').last();assert.equal(await hold.locator('input[data-key="reps"]').count(),0);assert.match(await hold.innerText(),/ثبت زمانی/);
-const holdRules=await page.evaluate(()=>eval(`(()=>{const w=getWorkout(current),e=w.exercises.at(-1);return{type:exerciseInputType(e),sets:e.sets,withSeconds:setIsDone({weight:'15',seconds:'35'},e),withReps:setIsDone({weight:'15',reps:'35'},e)}})()`));assert.deepEqual(holdRules,{type:'time',sets:1,withSeconds:true,withReps:false});
+const holdRules=await page.evaluate(()=>eval(`(()=>{const w=getWorkout(current),e=w.exercises.find(x=>x.guideId==='dumbbell-heavy-hold');return{type:exerciseInputType(e),sets:e.sets,withSeconds:setIsDone({weight:'15',seconds:'35'},e),withReps:setIsDone({weight:'15',reps:'35'},e)}})()`));assert.deepEqual(holdRules,{type:'time',sets:1,withSeconds:true,withReps:false});
 await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('.ex').count(),9);assert.equal(await page.locator('.cardio-panel').count(),1);
 assert.equal(await page.locator('.ex').first().evaluate(el=>!!(el.compareDocumentPosition(document.querySelector('.cardio-panel'))&Node.DOCUMENT_POSITION_FOLLOWING)),true);
 await page.locator('[data-activity-field="minutes"]').fill('18');await page.locator('[data-activity-field="rpe"]').fill('4');await page.locator('[data-activity-field="completed"]').check();
@@ -49,18 +49,18 @@ const cardioSaved=await page.evaluate(()=>eval('state.history.find(h=>h.weekKey=
 assert.equal(cardioSaved['block2-friday-cardio'].minutes,'18');assert.equal(cardioSaved['block2-friday-cardio'].completed,true);
 await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('[data-activity-field="minutes"]').inputValue(),'18');
 await page.evaluate(()=>window.openExercisePicker());await page.locator('#exerciseSearch').fill('Seated Leg Curl');assert.match(await page.locator('#exercisePickerList').innerText(),/پشت‌پا دستگاه نشسته/);await page.evaluate(()=>window.closeExercisePicker());
-await page.evaluate(()=>window.openWeek('2026-11-07'));await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('[data-activity-field="minutes"]').inputValue(),'');assert.equal(await page.evaluate(()=>eval('weekStats().done')),0);
+await page.evaluate(()=>window.openWeek('2026-11-07'));assert.equal(await page.evaluate(()=>eval('weekStats().total')),79);await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('[data-activity-field="minutes"]').inputValue(),'');assert.equal(await page.evaluate(()=>eval('weekStats().done')),0);
 const upgrades=await page.evaluate(()=>eval(`(()=>{
  const original=state,p=PROGRAM_VERSIONS['2026-10-17-three-day-74'],week='2026-11-14';
  const snapshot={schemaVersion:1,weekKey:week,programVersion:p.programVersion,days:Object.fromEntries(workoutsFromProgram(p).filter(w=>!w.optional).map(w=>[w.id,{exercises:w.exercises.map(cloneExercise)}]))};
  state=normalizeState({history:[],active:{},weekSnapshots:{[week]:snapshot},selectedWeekKey:week});upgradeUntouchedWeeks();const empty=ensureWeekSnapshot(week).programVersion;
  const custom=structuredClone(snapshot);custom.days.sun.exercises[0].reps='99';state=normalizeState({history:[],active:{},weekSnapshots:{[week]:custom},selectedWeekKey:week});upgradeUntouchedWeeks();const customReps=ensureWeekSnapshot(week).days.sun.exercises[0].reps;
  state=original;return{empty,customReps};
-})()`));assert.equal(upgrades.empty,'2026-10-31-block2-cba-76');assert.equal(upgrades.customReps,'99');
+})()`));assert.equal(upgrades.empty,'2026-11-07-cba-79');assert.equal(upgrades.customReps,'99');
 await page.evaluate(()=>window.openWeek('2026-10-31'));await page.evaluate(()=>window.openDay('fri'));
 await page.screenshot({path:path.join(root,'..','..','outputs','block2-friday-mobile.png'),fullPage:true});
 await page.locator('.cardio-panel').screenshot({path:path.join(root,'..','..','outputs','block2-cardio-mobile.png')});
-await page.reload();assert.equal(await page.evaluate(()=>eval('weekStats("2026-10-24").total')),74);assert.equal(await page.evaluate(()=>eval('weekStats("2026-10-31").total')),76);
+await page.reload();assert.equal(await page.evaluate(()=>eval('weekStats("2026-10-24").total')),74);assert.equal(await page.evaluate(()=>eval('weekStats("2026-10-31").total')),76);assert.equal(await page.evaluate(()=>eval('weekStats("2026-11-07").total')),79);
 const offlineContext=await browser.newContext({viewport:{width:390,height:844}}),off=await offlineContext.newPage();off.on('pageerror',e=>errors.push(e.message));await off.goto(url);
 await off.evaluate(async()=>{await navigator.serviceWorker.ready;if(!navigator.serviceWorker.controller)await new Promise(resolve=>navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true}))});await offlineContext.setOffline(true);await off.reload();
 await off.evaluate(()=>window.openWeek('2026-10-31'));await off.evaluate(()=>window.openDay('tue'));

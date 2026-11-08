@@ -1,0 +1,516 @@
+{
+  "programVersion": "2026-11-07-cba-79",
+  "effectiveWeekKey": "2026-11-07",
+  "instanceCount": 35,
+  "workingSets": 79,
+  "days": [
+    {
+      "id": "sun",
+      "dayFa": "یکشنبه",
+      "sessionCode": "C",
+      "totalWorkingSets": 28,
+      "exercises": [
+        {
+          "id": "b3_sun_01",
+          "order": 1,
+          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
+          "guideId": "chest-supported-h-row",
+          "sets": 3,
+          "reps": "8–12",
+          "restSec": "120–150",
+          "attachment": "دستگاه H با تکیه‌گاه سینه",
+          "volumeCredits": {},
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_02",
+          "order": 2,
+          "name": "لت سیمکش از جلو با گیرش خنثی",
+          "guideId": "neutral-grip-lat-pulldown",
+          "sets": 3,
+          "reps": "8–12",
+          "restSec": "120–150",
+          "attachment": "دستگیره خنثی یا V",
+          "volumeCredits": {},
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_03",
+          "order": 3,
+          "name": "نشر جانب سیمکش تک‌دست",
+          "guideId": "single-arm-cable-lateral-raise",
+          "sets": 3,
+          "reps": "12–20 هر دست",
+          "restSec": "60–75",
+          "attachment": "کاف مچ یا دسته D",
+          "volumeCredits": {
+            "lateralDeltsDirect": 3
+          },
+          "unilateral": true
+        },
+        {
+          "id": "b3_sun_04",
+          "order": 4,
+          "name": "فیس‌پول سیمکش",
+          "guideId": "cable-face-pull",
+          "sets": 2,
+          "reps": "15–20",
+          "restSec": "75–90",
+          "attachment": "طناب",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_05",
+          "order": 5,
+          "name": "شراگ دستگاه یا دمبل",
+          "guideId": "machine-or-dumbbell-shrug",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "دستگاه شراگ یا دو دمبل",
+          "volumeCredits": {
+            "upperTrapsDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_06",
+          "order": 6,
+          "name": "جلو بازو دمبل روی میز شیب‌دار",
+          "guideId": "incline-dumbbell-curl",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "دو دمبل؛ نیمکت ۴۵ تا ۶۰ درجه",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_07",
+          "order": 7,
+          "name": "جلو بازو چکشی دمبل",
+          "guideId": "dumbbell-hammer-curl",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "دو دمبل؛ کف دست روبه‌روی هم",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_08",
+          "order": 8,
+          "name": "پشت‌بازو سیمکش تک‌دست بالای سر",
+          "guideId": "single-arm-overhead-cable-triceps",
+          "sets": 2,
+          "reps": "10–15 هر دست",
+          "restSec": "75–90",
+          "attachment": "دسته D تک‌دست",
+          "volumeCredits": {
+            "tricepsLongHeadOverhead": 2
+          },
+          "unilateral": true
+        },
+        {
+          "id": "b3_sun_09",
+          "order": 9,
+          "name": "پشت‌بازو سیمکش با میله صاف",
+          "guideId": "straight-bar-triceps-pushdown",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "75–90",
+          "attachment": "میله صاف کوتاه",
+          "volumeCredits": {
+            "tricepsDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_10",
+          "order": 10,
+          "name": "جلو بازو معکوس سیمکش",
+          "guideId": "reverse-cable-curl",
+          "sets": 2,
+          "reps": "12–15",
+          "restSec": "75–90",
+          "attachment": "میله صاف کوتاه؛ گیرش رو به پایین",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_11",
+          "order": 11,
+          "name": "مچ سیمکش از زیر",
+          "guideId": "cable-wrist-curl",
+          "sets": 2,
+          "reps": "15–20",
+          "restSec": "60",
+          "attachment": "میله صاف کوتاه",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_12",
+          "order": 12,
+          "name": "هولد سنگین دمبل کنار بدن",
+          "guideId": "dumbbell-heavy-hold",
+          "sets": 1,
+          "reps": "30–45",
+          "restSec": "90",
+          "attachment": "دو دمبل هم‌وزن؛ بدون بند لیفت",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 1
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_sun_13",
+          "order": 13,
+          "name": "فلای معکوس سیمکش ایستاده",
+          "guideId": "cable-rear-delt-fly",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "75–90",
+          "attachment": "دو دسته D یا گرفتن کابل‌ها",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 2
+          },
+          "unilateral": false
+        }
+      ]
+    },
+    {
+      "id": "tue",
+      "dayFa": "سه‌شنبه",
+      "sessionCode": "B",
+      "totalWorkingSets": 26,
+      "exercises": [
+        {
+          "id": "b3_tue_01",
+          "order": 1,
+          "name": "پرس بالاسینه دستگاه",
+          "guideId": "incline-machine-chest-press",
+          "sets": 2,
+          "reps": "8–12",
+          "restSec": "120",
+          "attachment": "دستگاه پرس بالاسینه",
+          "volumeCredits": {
+            "chestDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_02",
+          "order": 2,
+          "name": "هاک اسکوات دستگاه",
+          "guideId": "hack-squat",
+          "sets": 3,
+          "reps": "8–12",
+          "restSec": "150–180",
+          "attachment": "دستگاه هاک‌اسکوات",
+          "volumeCredits": {
+            "quadricepsDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_03",
+          "order": 3,
+          "name": "جلوپا دستگاه",
+          "guideId": "leg-extension",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "دستگاه جلوپا",
+          "volumeCredits": {
+            "quadricepsDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_04",
+          "order": 4,
+          "name": "پشت‌پا دستگاه نشسته",
+          "guideId": "seated-leg-curl",
+          "sets": 3,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "دستگاه پشت‌پا نشسته",
+          "volumeCredits": {
+            "hamstringsDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_05",
+          "order": 5,
+          "name": "پول‌ترو سیمکش",
+          "guideId": "cable-pull-through",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90–120",
+          "attachment": "طناب؛ قرقره پایین",
+          "volumeCredits": {},
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_06",
+          "order": 6,
+          "name": "ساق روی پرس پا",
+          "guideId": "leg-press-calf-raise",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "75–90",
+          "attachment": "دستگاه پرس پا",
+          "volumeCredits": {
+            "calvesDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_07",
+          "order": 7,
+          "name": "ساق نشسته دستگاه",
+          "guideId": "seated-calf-raise",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "75–90",
+          "attachment": "دستگاه ساق نشسته",
+          "volumeCredits": {
+            "calvesDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_08",
+          "order": 8,
+          "name": "جلو بازو لاری دستگاه",
+          "guideId": "machine-preacher-curl",
+          "sets": 2,
+          "reps": "8–12",
+          "restSec": "90–120",
+          "attachment": "دستگاه لاری",
+          "volumeCredits": {
+            "bicepsBrachialisBrachioradialisDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_09",
+          "order": 9,
+          "name": "مچ معکوس سیمکش",
+          "guideId": "cable-reverse-wrist-curl",
+          "sets": 2,
+          "reps": "15–20",
+          "restSec": "60–75",
+          "attachment": "میله صاف کوتاه",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_10",
+          "order": 10,
+          "name": "چرخش ساعد با دمبل سبک",
+          "guideId": "forearm-pronation-supination",
+          "sets": 2,
+          "reps": "12–15 هر جهت",
+          "restSec": "60",
+          "attachment": "دمبل سبک یا چکش؛ آرنج تکیه‌داده",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_11",
+          "order": 11,
+          "name": "کرانچ سیمکش زانوزده",
+          "guideId": "cable-kneeling-crunch",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "75",
+          "attachment": "طناب",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_12",
+          "order": 12,
+          "name": "پالوف پرس سیمکش",
+          "guideId": "cable-pallof-press",
+          "sets": 2,
+          "reps": "10–15 هر سمت",
+          "restSec": "60–75",
+          "attachment": "دسته D؛ هر دو سمت",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "unilateral": true
+        }
+      ]
+    },
+    {
+      "id": "fri",
+      "dayFa": "جمعه",
+      "sessionCode": "A",
+      "totalWorkingSets": 25,
+      "exercises": [
+        {
+          "id": "b3_fri_01",
+          "order": 1,
+          "name": "پرس سرشانه دستگاه همگرا با گریپ خنثی یا نیمه‌خنثی",
+          "guideId": "machine-shoulder-press",
+          "sets": 3,
+          "reps": "8–12",
+          "restSec": "180",
+          "attachment": "دستگاه همگرا؛ گیرش خنثی یا نیمه‌خنثی",
+          "volumeCredits": {
+            "shouldersDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_02",
+          "order": 2,
+          "name": "پرس بالاسینه دمبل",
+          "guideId": "incline-dumbbell-press",
+          "sets": 3,
+          "reps": "6–10",
+          "restSec": "150–180",
+          "attachment": "دو دمبل؛ نیمکت شیب متوسط",
+          "volumeCredits": {
+            "chestDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_03",
+          "order": 3,
+          "name": "نشر جانب دمبل نشسته",
+          "guideId": "seated-side-lateral-raise",
+          "sets": 4,
+          "reps": "12–20",
+          "restSec": "90–120",
+          "attachment": "دو دمبل و نیمکت",
+          "volumeCredits": {
+            "lateralDeltsDirect": 4
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_04",
+          "order": 4,
+          "name": "پول‌اور سیمکش دست صاف با طناب",
+          "guideId": "straight-arm-rope-pulldown",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "طناب؛ قرقره بالا",
+          "volumeCredits": {
+            "backAndLatsDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_05",
+          "order": 5,
+          "name": "پرس سینه دستگاه نشسته",
+          "guideId": "forward-machine-chest-press",
+          "sets": 3,
+          "reps": "8–12",
+          "restSec": "120–150",
+          "attachment": "دستگاه پرس سینه نشسته",
+          "volumeCredits": {
+            "chestDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_06",
+          "order": 6,
+          "name": "کراس‌اور سیمکش بالا به پایین",
+          "guideId": "high-to-low-cable-crossover",
+          "sets": 2,
+          "reps": "12–15",
+          "restSec": "75–90",
+          "attachment": "دو دسته D",
+          "volumeCredits": {
+            "chestDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_07",
+          "order": 7,
+          "name": "فلای معکوس سیمکش ایستاده",
+          "guideId": "cable-rear-delt-fly",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "75–90",
+          "attachment": "دو دسته D یا گرفتن کابل‌ها",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_08",
+          "order": 8,
+          "name": "پشت‌بازو طناب بالای سر",
+          "guideId": "overhead-rope-triceps-extension",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "attachment": "طناب؛ پشت به سیمکش",
+          "volumeCredits": {
+            "tricepsLongHeadOverhead": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_09",
+          "order": 9,
+          "name": "ریورس کرانچ",
+          "guideId": "reverse-crunch",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "60",
+          "attachment": "بدون وزنه",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_fri_10",
+          "order": 10,
+          "name": "وودچاپر سیمکش از بالا به پایین",
+          "guideId": "high-to-low-cable-woodchopper",
+          "sets": 2,
+          "reps": "10–15 هر سمت",
+          "restSec": "60",
+          "attachment": "دسته D تک‌دست؛ طناب جایگزین",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "unilateral": true
+        }
+      ]
+    }
+  ]
+}

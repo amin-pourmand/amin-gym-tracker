@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "programVersion": "2026-10-31-block2-cba-76",
+  "programVersion": "2026-11-07-cba-79",
   "rules": {
     "trainingDayIds": [
       "sun",
@@ -17,13 +17,13 @@
     "warmupsCountTowardWorkingSets": false,
     "postureRoutineCountsTowardWorkingSets": false,
     "postureRoutineCountsTowardCompletion": false,
-    "expectedWeeklyWorkingSets": 76,
+    "expectedWeeklyWorkingSets": 79,
     "weeklyTotalMustBeDerivedFromExercises": true,
     "oneSidedWorkingSetRule": "یک دور کامل چپ و راست، یک ست کاری محسوب می‌شود.",
     "weekCompletion": {
       "basis": "completed_working_sets",
       "defaultDenominatorSource": "selected_week_snapshot",
-      "defaultProgramDenominator": 76,
+      "defaultProgramDenominator": 79,
       "excludeWarmups": true,
       "excludeRestDays": true,
       "excludePostureRoutine": true,
@@ -153,34 +153,36 @@
     }
   },
   "volumeTargets": {
-    "chestDirect": 12,
-    "backAndLatsDirect": 11,
-    "lateralDeltsDirect": 6,
+    "chestDirect": 10,
+    "backAndLatsDirect": 8,
+    "lateralDeltsDirect": 7,
     "rearDeltsAndScapularControlDirect": 6,
-    "upperTrapsDirect": 3,
-    "tricepsDirect": 5,
+    "upperTrapsDirect": 2,
+    "upperTrapsAdditional": "درگیری هولد",
+    "tricepsDirect": 6,
     "tricepsLongHeadOverhead": 4,
-    "bicepsBrachialisBrachioradialisDirect": 7,
-    "forearmsAndGripDirect": 5,
-    "absAndObliques": 3,
+    "bicepsBrachialisBrachioradialisDirect": 8,
+    "forearmsAndGripDirect": 7,
+    "absAndObliques": 8,
     "quadricepsDirect": 5,
-    "hamstringsDirect": 4,
+    "hamstringsDirect": 3,
+    "glutesDirect": 2,
     "calvesDirect": 4,
-    "calvesSessions": 1
+    "calvesSessions": 2
   },
   "validation": {
     "expectedWorkingSetsByDay": {
-      "sun": 26,
+      "sun": 28,
       "tue": 26,
-      "fri": 24
+      "fri": 25
     },
     "expectedExerciseCountByDay": {
       "sun": 13,
       "tue": 12,
-      "fri": 9
+      "fri": 10
     },
-    "expectedWeeklyWorkingSets": 76,
-    "expectedWeeklyExerciseCount": 34,
+    "expectedWeeklyWorkingSets": 79,
+    "expectedWeeklyExerciseCount": 35,
     "calculateFrom": "days[type=training].exercises[].sets",
     "cardioExcluded": true,
     "volumeCreditSource": "exercises[].volumeCredits",
@@ -197,7 +199,9 @@
       "absAndObliques",
       "quadricepsDirect",
       "hamstringsDirect",
-      "calvesDirect"
+      "glutesDirect",
+      "calvesDirect",
+      "calvesSessions"
     ]
   },
   "days": [
@@ -212,9 +216,9 @@
       "id": "sun",
       "dayFa": "یکشنبه",
       "type": "training",
-      "title": "C — پشت، کول، سرشانه خلفی، بازو و ساعد",
+      "title": "C — پشت، سرشانه، بازو و ساعد",
       "subtitle": "Block 2 — CBA • ترتیب حرکات مطابق برنامه مرجع",
-      "totalWorkingSets": 26,
+      "totalWorkingSets": 28,
       "warmup": [
         {
           "id": "b2-warm-sun-cardio",
@@ -240,7 +244,7 @@
       ],
       "exercises": [
         {
-          "id": "b2_sun_01",
+          "id": "b3_sun_01",
           "order": 1,
           "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
           "muscleGroup": "پشت؛ ضخامت",
@@ -256,57 +260,54 @@
             "allowNotes": true
           },
           "guideId": "chest-supported-h-row",
-          "volumeCredits": {
-            "backAndLatsDirect": 3
-          },
-          "note": "سینه روی تکیه‌گاه؛ حرکت با آرنج و کنترل کتف، بدون تاب‌دادن کمر. یکشنبه اولین حرکت و اولویت ضخامت و قدرت پشت بالایی است.",
+          "volumeCredits": {},
+          "note": "پد سینه ثابت بماند؛ آرنج‌ها را عقب بکش و تنه را تاب نده.",
           "englishName": "Chest-Supported H-Row",
           "searchAliases": [
             "Chest-Supported H-Row",
             "chest supported h row"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه H با تکیه‌گاه سینه"
         },
         {
-          "guideId": "neutral-grip-lat-pulldown",
-          "name": "لت سیمکش از جلو دستگیره خنثی",
+          "id": "b3_sun_02",
+          "order": 2,
+          "name": "لت سیمکش از جلو با گیرش خنثی",
           "muscleGroup": "زیربغل",
           "sets": 3,
           "reps": "8–12",
           "restSec": "120–150",
-          "attachment": "دستگیره خنثی",
-          "inputType": "reps",
           "targetRir": "1–2",
-          "id": "b2_sun_02",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "neutral-grip-lat-pulldown",
+          "volumeCredits": {},
+          "note": "سینه بالا؛ آرنج‌ها رو به پایین؛ میله را پشت گردن نبر و تنه را تاب نده.",
           "englishName": "Neutral-Grip Lat Pulldown",
           "searchAliases": [
             "Neutral-Grip Lat Pulldown",
             "neutral grip lat pulldown"
           ],
-          "order": 2,
           "legacyOnly": false,
-          "note": "دستگیره خنثی و مسیر کنترل‌شده؛ از تاب‌دادن تنه جلوگیری شود.",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
           "unilateral": false,
-          "volumeCredits": {
-            "backAndLatsDirect": 3
-          }
+          "attachment": "دستگیره خنثی یا V"
         },
         {
-          "id": "b2_sun_03",
+          "id": "b3_sun_03",
           "order": 3,
           "name": "نشر جانب سیمکش تک‌دست",
           "muscleGroup": "سرشانه کناری",
-          "sets": 2,
+          "sets": 3,
           "reps": "12–20 هر دست",
           "restSec": "60–75",
-          "targetRir": "2–3",
+          "targetRir": "1–2",
           "inputType": "reps",
           "tracking": {
             "showWeight": true,
@@ -314,7 +315,17 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "کاف مچ یا دسته D",
+          "guideId": "single-arm-cable-lateral-raise",
+          "volumeCredits": {
+            "lateralDeltsDirect": 3
+          },
+          "note": "آرنج را کمی جلوتر از تنه تا نزدیک سطح شانه بالا ببر؛ شانه را بالا ننداز و تنه را خم نکن.",
+          "englishName": "Single-Arm Cable Lateral Raise",
+          "searchAliases": [
+            "Single-Arm Cable Lateral Raise",
+            "single arm cable lateral raise"
+          ],
+          "legacyOnly": false,
           "unilateral": {
             "mode": "paired",
             "sides": [
@@ -325,50 +336,11 @@
             "allowSharedValue": true,
             "allowSideNotes": true
           },
-          "note": "شدت متوسط؛ جمعه جلسه اصلی سرشانه است. بدون تاب‌دادن تنه و بالاانداختن عمدی شانه. هر دور کامل هر دو سمت یک ست برنامه‌ای است.",
-          "guideId": "single-arm-cable-lateral-raise",
-          "volumeCredits": {
-            "lateralDeltsDirect": 2
-          },
-          "englishName": "Single-Arm Cable Lateral Raise",
-          "searchAliases": [
-            "Single-Arm Cable Lateral Raise",
-            "single arm cable lateral raise"
-          ],
-          "legacyOnly": false
+          "attachment": "کاف مچ یا دسته D"
         },
         {
-          "id": "b2_sun_04",
+          "id": "b3_sun_04",
           "order": 4,
-          "name": "فلای‌بک دستگاه",
-          "muscleGroup": "سرشانه خلفی",
-          "sets": 2,
-          "reps": "12–20",
-          "restSec": "75–90",
-          "targetRir": "2–3",
-          "inputType": "reps",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
-          "guideId": "reverse-pec-deck",
-          "volumeCredits": {
-            "rearDeltsAndScapularControlDirect": 2
-          },
-          "note": "کنترل‌شده و بدون رکوردگیری سنگین؛ پشت‌شانه یکشنبه و جمعه تمرین دارد.",
-          "englishName": "Reverse Pec Deck",
-          "searchAliases": [
-            "Reverse Pec Deck",
-            "reverse pec deck"
-          ],
-          "legacyOnly": false,
-          "unilateral": false
-        },
-        {
-          "id": "b2_sun_05",
-          "order": 5,
           "name": "فیس‌پول سیمکش",
           "muscleGroup": "سرشانه خلفی و کنترل کتف",
           "sets": 2,
@@ -382,28 +354,28 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "طناب",
           "guideId": "cable-face-pull",
           "volumeCredits": {
             "rearDeltsAndScapularControlDirect": 2
           },
-          "note": "مکمل تقویت پشت‌شانه و کنترل کتف؛ وزنه کنترل‌شده و بدون جبران با کمر، نه حرکت رکورد سنگین.",
+          "note": "طناب را به سمت پیشانی بکش؛ دست‌ها کنار گوش باز شوند و شانه‌ها پایین بمانند.",
           "englishName": "Cable Face Pull",
           "searchAliases": [
             "Cable Face Pull",
             "cable face pull"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "طناب"
         },
         {
-          "id": "b2_sun_06",
-          "order": 6,
-          "name": "شراگ دمبل یا دستگاه",
+          "id": "b3_sun_05",
+          "order": 5,
+          "name": "شراگ دستگاه یا دمبل",
           "muscleGroup": "کول بالایی",
-          "sets": 3,
+          "sets": 2,
           "reps": "10–15",
-          "restSec": "90–120",
+          "restSec": "90",
           "targetRir": "1–2",
           "inputType": "reps",
           "tracking": {
@@ -412,24 +384,24 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دستگاه شراگ یا دو دمبل",
           "guideId": "machine-or-dumbbell-shrug",
           "volumeCredits": {
-            "upperTrapsDirect": 3
+            "upperTrapsDirect": 2
           },
+          "note": "شانه‌ها مستقیم بالا؛ مکث کوتاه؛ شانه‌ها را نچرخان و سر را جلو نده.",
           "englishName": "Dumbbell or Machine Shrug",
           "searchAliases": [
             "Dumbbell or Machine Shrug",
             "machine or dumbbell shrug"
           ],
           "legacyOnly": false,
-          "note": "مکث کوتاه بالای حرکت؛ شانه‌ها مستقیم بالا بروند و چرخانده نشوند.",
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه شراگ یا دو دمبل"
         },
         {
-          "id": "b2_sun_07",
-          "order": 7,
-          "name": "جلو بازو دمبل میز شیب‌دار",
+          "id": "b3_sun_06",
+          "order": 6,
+          "name": "جلو بازو دمبل روی میز شیب‌دار",
           "muscleGroup": "جلو بازو؛ تأکید سر بلند",
           "sets": 2,
           "reps": "10–15",
@@ -442,24 +414,24 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دو دمبل؛ نیمکت با شیب ۴۵ تا ۶۰ درجه",
           "guideId": "incline-dumbbell-curl",
           "volumeCredits": {
             "bicepsBrachialisBrachioradialisDirect": 2
           },
-          "note": "",
+          "note": "بازوها پشت خط بدن بمانند؛ آرنج ثابت و مچ صاف؛ وزنه را تاب نده.",
           "englishName": "Incline Dumbbell Curl",
           "searchAliases": [
             "Incline Dumbbell Curl",
             "incline dumbbell curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دمبل؛ نیمکت ۴۵ تا ۶۰ درجه"
         },
         {
-          "id": "b2_sun_08",
-          "order": 8,
-          "name": "جلو بازو چکشی",
+          "id": "b3_sun_07",
+          "order": 7,
+          "name": "جلو بازو چکشی دمبل",
           "muscleGroup": "جلو بازو، براکیالیس و براکیورادیالیس",
           "sets": 2,
           "reps": "10–15",
@@ -476,18 +448,19 @@
           "volumeCredits": {
             "bicepsBrachialisBrachioradialisDirect": 2
           },
-          "note": "",
+          "note": "آرنج کنار بدن؛ بدون تاب تنه بالا بیاور و پایین‌رفتن را کنترل کن.",
           "englishName": "Hammer Curl",
           "searchAliases": [
             "Hammer Curl",
             "dumbbell hammer curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دمبل؛ کف دست روبه‌روی هم"
         },
         {
-          "id": "b2_sun_09",
-          "order": 9,
+          "id": "b3_sun_08",
+          "order": 8,
           "name": "پشت‌بازو سیمکش تک‌دست بالای سر",
           "muscleGroup": "پشت‌بازو؛ تأکید سر بلند",
           "sets": 2,
@@ -501,7 +474,17 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دسته D",
+          "guideId": "single-arm-overhead-cable-triceps",
+          "volumeCredits": {
+            "tricepsLongHeadOverhead": 2
+          },
+          "note": "بازو کنار سر و آرنج ثابت؛ ساعد را باز کن و کشش را بدون درد کنترل کن.",
+          "englishName": "One-Arm Overhead Cable Triceps Extension",
+          "searchAliases": [
+            "One-Arm Overhead Cable Triceps Extension",
+            "single arm overhead cable triceps"
+          ],
+          "legacyOnly": false,
           "unilateral": {
             "mode": "paired",
             "sides": [
@@ -512,25 +495,14 @@
             "allowSharedValue": true,
             "allowSideNotes": true
           },
-          "note": "دسته D تک‌دست؛ هر دور چپ و راست یک ست برنامه‌ای است. در صورت تحریک علائم عصبی یا درد، حرکت محرک ادامه داده نشود.",
-          "guideId": "single-arm-overhead-cable-triceps",
-          "volumeCredits": {
-            "tricepsDirect": 2,
-            "tricepsLongHeadOverhead": 2
-          },
-          "englishName": "One-Arm Overhead Cable Triceps Extension",
-          "searchAliases": [
-            "One-Arm Overhead Cable Triceps Extension",
-            "single arm overhead cable triceps"
-          ],
-          "legacyOnly": false
+          "attachment": "دسته D تک‌دست"
         },
         {
-          "id": "b2_sun_10",
-          "order": 10,
-          "name": "پشت‌بازو سیمکش میله صاف",
+          "id": "b3_sun_09",
+          "order": 9,
+          "name": "پشت‌بازو سیمکش با میله صاف",
           "muscleGroup": "پشت‌بازو",
-          "sets": 1,
+          "sets": 2,
           "reps": "10–15",
           "restSec": "75–90",
           "targetRir": "1–2",
@@ -541,26 +513,26 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "میله صاف کوتاه",
           "guideId": "straight-bar-triceps-pushdown",
           "volumeCredits": {
-            "tricepsDirect": 1
+            "tricepsDirect": 2
           },
-          "note": "",
+          "note": "آرنج‌ها کنار بدن ثابت؛ میله را پایین فشار بده و شانه‌ها را جلو نبر.",
           "englishName": "Straight-Bar Triceps Pushdown",
           "searchAliases": [
             "Straight-Bar Triceps Pushdown",
             "straight bar triceps pushdown"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "میله صاف کوتاه"
         },
         {
-          "id": "b2_sun_11",
-          "order": 11,
+          "id": "b3_sun_10",
+          "order": 10,
           "name": "جلو بازو معکوس سیمکش",
           "muscleGroup": "براکیورادیالیس، براکیالیس و ساعد",
-          "sets": 1,
+          "sets": 2,
           "reps": "12–15",
           "restSec": "75–90",
           "targetRir": "1–2",
@@ -571,28 +543,28 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "میله صاف کوتاه",
           "guideId": "reverse-cable-curl",
           "volumeCredits": {
-            "bicepsBrachialisBrachioradialisDirect": 1
+            "bicepsBrachialisBrachioradialisDirect": 2
           },
-          "note": "",
+          "note": "مچ صاف و آرنج کنار بدن؛ بدون تاب‌دادن تنه بالا بیاور.",
           "englishName": "Reverse Cable Curl",
           "searchAliases": [
             "Reverse Cable Curl",
             "reverse cable curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "میله صاف کوتاه؛ گیرش رو به پایین"
         },
         {
-          "id": "b2_sun_12",
-          "order": 12,
+          "id": "b3_sun_11",
+          "order": 11,
           "name": "مچ سیمکش از زیر",
           "muscleGroup": "ساعد",
           "sets": 2,
           "reps": "15–20",
-          "restSec": "60–75",
+          "restSec": "60",
           "targetRir": "1–2",
           "inputType": "reps",
           "tracking": {
@@ -601,31 +573,30 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "میله صاف کوتاه",
           "guideId": "cable-wrist-curl",
           "volumeCredits": {
             "forearmsAndGripDirect": 2
           },
-          "note": "",
+          "note": "ساعد ثابت و کف دست رو به بالا؛ فقط مچ را خم کن و دامنه را آرام اجرا کن.",
           "englishName": "Cable Wrist Curl",
           "searchAliases": [
             "Cable Wrist Curl",
             "cable wrist curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "میله صاف کوتاه"
         },
         {
-          "id": "b2_sun_13",
-          "order": 13,
-          "name": "نگه‌داشتن دمبل سنگین",
+          "id": "b3_sun_12",
+          "order": 12,
+          "name": "هولد سنگین دمبل کنار بدن",
           "muscleGroup": "قدرت گرفتن، ساعد و کول",
           "sets": 1,
-          "displayTarget": "۳۰ تا ۴۵ ثانیه",
+          "reps": "30–45",
           "restSec": "90",
           "targetRir": "کنترل‌شده",
           "inputType": "time",
-          "attachment": "دو دمبل هم‌وزن؛ بدون بند لیفت",
           "tracking": {
             "weightMode": "per_dumbbell",
             "weightLabel": "وزن هر دمبل",
@@ -637,24 +608,52 @@
             "showRir": true,
             "allowNotes": true
           },
-          "note": "وزن هر دمبل و مدت برحسب ثانیه ثبت شود. بدن پایدار، مچ بدون فشار دردناک؛ پیش از افت فرم متوقف کن. این نسخه یک ست دارد، نه دو ست نسخه قبل.",
           "guideId": "dumbbell-heavy-hold",
           "volumeCredits": {
             "forearmsAndGripDirect": 1
           },
+          "note": "مچ صاف و تنه پایدار؛ شراگ نکن؛ پیش از بازشدن انگشتان یا افت فرم متوقف شو.",
           "englishName": "Heavy Dumbbell Hold",
           "searchAliases": [
             "Heavy Dumbbell Hold",
             "dumbbell heavy hold"
           ],
-          "reps": "30–45",
           "legacyOnly": false,
-          "durationSec": "30–45",
-          "unit": "ثانیه",
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دمبل هم‌وزن؛ بدون بند لیفت"
+        },
+        {
+          "id": "b3_sun_13",
+          "order": 13,
+          "name": "فلای معکوس سیمکش ایستاده",
+          "muscleGroup": "سرشانه خلفی",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "75–90",
+          "targetRir": "1–2",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "cable-rear-delt-fly",
+          "volumeCredits": {
+            "rearDeltsAndScapularControlDirect": 2
+          },
+          "note": "تنه ثابت و آرنج کمی خم؛ دست‌ها را به طرفین باز کن؛ شانه‌ها بالا نروند.",
+          "englishName": "cable-rear-delt-fly",
+          "searchAliases": [
+            "cable rear delt fly"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "دو دسته D یا گرفتن کابل‌ها"
         }
       ],
-      "sessionCode": "C"
+      "sessionCode": "C",
+      "estimatedMinutes": "۹۰ تا ۱۰۵ دقیقه"
     },
     {
       "id": "mon",
@@ -667,7 +666,7 @@
       "id": "tue",
       "dayFa": "سه‌شنبه",
       "type": "training",
-      "title": "B — پایین‌تنه، بالاتنه مکمل، ساعد و میان‌تنه",
+      "title": "B — سینه، پا، ساعد و میان‌تنه",
       "subtitle": "Block 2 — CBA • ترتیب حرکات مطابق برنامه مرجع",
       "totalWorkingSets": 26,
       "warmup": [
@@ -682,14 +681,14 @@
           "id": "b2-warm-tue-ramp",
           "name": "گرم‌کردن اختصاصی اولین حرکت سنگین",
           "dose": "۲–۳ ست افزایشی سبک‌تر از وزنه کاری",
-          "guideId": "seated-leg-press",
+          "guideId": "incline-machine-chest-press",
           "mediaRequired": false
         },
         {
           "id": "b2-warm-tue-later",
           "name": "آماده‌سازی حرکات سنگین بعدی",
           "dose": "در صورت نیاز ۱–۲ ست افزایشی؛ خارج از ست کاری",
-          "guideId": "seated-leg-press",
+          "guideId": "incline-machine-chest-press",
           "mediaRequired": false
         },
         {
@@ -702,10 +701,40 @@
       ],
       "exercises": [
         {
-          "id": "b2_tue_01",
+          "id": "b3_tue_01",
           "order": 1,
-          "name": "پرس پا دستگاه",
-          "muscleGroup": "چهارسر و پایین‌تنه",
+          "name": "پرس بالاسینه دستگاه",
+          "muscleGroup": "سینه بالایی",
+          "sets": 2,
+          "reps": "8–12",
+          "restSec": "120",
+          "targetRir": "1–2",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "incline-machine-chest-press",
+          "volumeCredits": {
+            "chestDirect": 2
+          },
+          "note": "دسته‌ها هم‌سطح بالای سینه؛ کتف‌ها ثابت؛ در برگشت فقط تا کشش بدون درد.",
+          "englishName": "Incline Machine Chest Press",
+          "searchAliases": [
+            "Incline Machine Chest Press",
+            "incline machine chest press"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "دستگاه پرس بالاسینه"
+        },
+        {
+          "id": "b3_tue_02",
+          "order": 2,
+          "name": "هاک اسکوات دستگاه",
+          "muscleGroup": "چهارسر",
           "sets": 3,
           "reps": "8–12",
           "restSec": "150–180",
@@ -717,51 +746,21 @@
             "showRir": true,
             "allowNotes": true
           },
-          "guideId": "seated-leg-press",
+          "guideId": "hack-squat",
           "volumeCredits": {
             "quadricepsDirect": 3
           },
-          "englishName": "Leg Press",
+          "note": "پشت و لگن روی پد؛ زانو هم‌جهت پنجه؛ تا پیش از جداشدن لگن پایین برو و با کف پا بالا بیا.",
+          "englishName": "Hack Squat",
           "searchAliases": [
-            "Leg Press",
-            "seated leg press"
+            "hack squat"
           ],
           "legacyOnly": false,
-          "note": "فقط بدون تشدید علائم زانو و کشاله ران؛ دامنه مطابق تحمل و کنترل. با باقی‌ماندن درد کشاله، سنگین اجرا نشود و بازگشت تدریجی/ارزیابی لازم است.",
-          "unilateral": false
-        },
-        {
-          "guideId": "seated-leg-curl",
-          "name": "پشت‌پا دستگاه نشسته",
-          "muscleGroup": "همسترینگ",
-          "sets": 4,
-          "reps": "10–15",
-          "restSec": "90–120",
-          "attachment": "دستگاه پشت‌پا نشسته",
-          "inputType": "reps",
-          "targetRir": "1–2",
-          "id": "b2_tue_02",
-          "englishName": "Seated Leg Curl",
-          "searchAliases": [
-            "Seated Leg Curl",
-            "seated leg curl"
-          ],
-          "order": 2,
-          "legacyOnly": false,
-          "note": "نوع نشسته انتخاب اصلی است؛ نوع خوابیده فقط پس از تصمیم آگاهانه و در صورت مشکل با نشسته جایگزین شود، نه خودکار.",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
           "unilateral": false,
-          "volumeCredits": {
-            "hamstringsDirect": 4
-          }
+          "attachment": "دستگاه هاک‌اسکوات"
         },
         {
-          "id": "b2_tue_03",
+          "id": "b3_tue_03",
           "order": 3,
           "name": "جلوپا دستگاه",
           "muscleGroup": "چهارسر",
@@ -780,50 +779,81 @@
           "volumeCredits": {
             "quadricepsDirect": 2
           },
-          "note": "دامنه مطابق تحمل زانو و با کنترل کامل؛ درد یا تشدید علائم تحمل نشود.",
+          "note": "محور دستگاه روبه‌روی زانو؛ بالا مکث کوتاه و پایین‌رفتن آرام؛ دامنه بدون درد.",
           "englishName": "Leg Extension",
           "searchAliases": [
             "Leg Extension",
             "leg extension"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه جلوپا"
         },
         {
-          "guideId": "cable-pull-through",
-          "name": "پول‌ترو سیمکش",
-          "muscleGroup": "باسن و همسترینگ",
-          "sets": 2,
-          "reps": "10–15",
-          "restSec": "90–120",
-          "attachment": "طناب؛ قرقره پایین",
-          "inputType": "reps",
-          "targetRir": "2–3",
-          "id": "b2_tue_04",
-          "englishName": "Cable Pull-Through",
-          "searchAliases": [
-            "Cable Pull-Through",
-            "cable pull through"
-          ],
+          "id": "b3_tue_04",
           "order": 4,
-          "legacyOnly": false,
-          "note": "الگوی مفصل ران با کنترل تنه؛ جایگزین کاملاً معادل RDL برای تمام همسترینگ نیست. RDL سنگین در این بلوک وجود ندارد.",
+          "name": "پشت‌پا دستگاه نشسته",
+          "muscleGroup": "همسترینگ",
+          "sets": 3,
+          "reps": "10–15",
+          "restSec": "90",
+          "targetRir": "1–2",
+          "inputType": "reps",
           "tracking": {
             "showWeight": true,
             "showReps": true,
             "showRir": true,
             "allowNotes": true
           },
+          "guideId": "seated-leg-curl",
+          "volumeCredits": {
+            "hamstringsDirect": 3
+          },
+          "note": "محور زانو با دستگاه هم‌راستا؛ پاشنه را پایین بکش و لگن را روی نشیمن نگه دار.",
+          "englishName": "Seated Leg Curl",
+          "searchAliases": [
+            "Seated Leg Curl",
+            "seated leg curl"
+          ],
+          "legacyOnly": false,
           "unilateral": false,
-          "volumeCredits": {}
+          "attachment": "دستگاه پشت‌پا نشسته"
         },
         {
-          "id": "b2_tue_05",
+          "id": "b3_tue_05",
           "order": 5,
-          "name": "ساق ایستاده دستگاه",
-          "muscleGroup": "ساق",
+          "name": "پول‌ترو سیمکش",
+          "muscleGroup": "باسن و همسترینگ",
           "sets": 2,
           "reps": "10–15",
+          "restSec": "90–120",
+          "targetRir": "2–3",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "cable-pull-through",
+          "volumeCredits": {},
+          "note": "باسن را عقب بده؛ ستون فقرات خنثی و طناب نزدیک بدن؛ با انقباض باسن بایست، کمر را گود نکن.",
+          "englishName": "Cable Pull-Through",
+          "searchAliases": [
+            "Cable Pull-Through",
+            "cable pull through"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "طناب؛ قرقره پایین"
+        },
+        {
+          "id": "b3_tue_06",
+          "order": 6,
+          "name": "ساق روی پرس پا",
+          "muscleGroup": "ساق",
+          "sets": 2,
+          "reps": "12–20",
           "restSec": "75–90",
           "targetRir": "1–2",
           "inputType": "reps",
@@ -833,23 +863,22 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دستگاه ساق ایستاده",
-          "guideId": "standing-calf-raise",
+          "guideId": "leg-press-calf-raise",
           "volumeCredits": {
             "calvesDirect": 2
           },
-          "englishName": "Standing Calf Raise",
+          "note": "پنجه‌ها روی لبه صفحه؛ پاشنه را پایین و سپس کامل بالا ببر؛ زانو ثابت و حرکت بدون جهش.",
+          "englishName": "leg-press-calf-raise",
           "searchAliases": [
-            "Standing Calf Raise",
-            "standing calf raise"
+            "leg press calf raise"
           ],
           "legacyOnly": false,
-          "note": "نوع ایستاده طبق برنامه حفظ شده است. اگر دستگاه مناسب در باشگاه موجود نیست، جایگزینی خودکار انجام نشود و برای انتخاب وسیله مناسب تأیید لازم است.",
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه پرس پا"
         },
         {
-          "id": "b2_tue_06",
-          "order": 6,
+          "id": "b3_tue_07",
+          "order": 7,
           "name": "ساق نشسته دستگاه",
           "muscleGroup": "ساق",
           "sets": 2,
@@ -863,82 +892,24 @@
             "showRir": true,
             "allowNotes": true
           },
-          "note": "",
           "guideId": "seated-calf-raise",
           "volumeCredits": {
             "calvesDirect": 2
           },
+          "note": "پاشنه را پایین ببر، روی پنجه بالا بیا و در دو انتهای دامنه مکث کن؛ بدون جهش.",
           "englishName": "Seated Calf Raise",
           "searchAliases": [
             "Seated Calf Raise",
             "seated calf raise"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه ساق نشسته"
         },
         {
-          "id": "b2_tue_07",
-          "order": 7,
-          "name": "پرس بالاسینه دستگاه",
-          "muscleGroup": "سینه بالایی",
-          "sets": 2,
-          "reps": "10–15",
-          "restSec": "120",
-          "targetRir": "1–2",
-          "inputType": "reps",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
-          "guideId": "incline-machine-chest-press",
-          "volumeCredits": {
-            "chestDirect": 2
-          },
-          "note": "",
-          "englishName": "Incline Machine Chest Press",
-          "searchAliases": [
-            "Incline Machine Chest Press",
-            "incline machine chest press"
-          ],
-          "legacyOnly": false,
-          "unilateral": false
-        },
-        {
-          "id": "b2_tue_08",
+          "id": "b3_tue_08",
           "order": 8,
-          "name": "پول‌اور سیمکش دست صاف",
-          "muscleGroup": "زیربغل",
-          "sets": 2,
-          "reps": "12–15",
-          "restSec": "90",
-          "targetRir": "1–2",
-          "inputType": "reps",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
-          "attachment": "طناب",
-          "guideId": "straight-arm-rope-pulldown",
-          "volumeCredits": {
-            "backAndLatsDirect": 2
-          },
-          "englishName": "Straight-Arm Cable Pulldown",
-          "searchAliases": [
-            "Straight-Arm Cable Pulldown",
-            "straight arm rope pulldown"
-          ],
-          "legacyOnly": false,
-          "note": "تمرکز روی لت با آرنج تقریباً ثابت؛ کمر تاب نخورد و گود نشود.",
-          "unilateral": false
-        },
-        {
-          "id": "b2_tue_09",
-          "order": 9,
-          "name": "جلو بازو لاری",
+          "name": "جلو بازو لاری دستگاه",
           "muscleGroup": "جلو بازو",
           "sets": 2,
           "reps": "8–12",
@@ -955,18 +926,19 @@
           "volumeCredits": {
             "bicepsBrachialisBrachioradialisDirect": 2
           },
-          "note": "",
+          "note": "بازوها روی پد؛ وزنه را کنترل‌شده پایین ببر و آرنج را ناگهانی قفل نکن.",
           "englishName": "Preacher Curl",
           "searchAliases": [
             "Preacher Curl",
             "machine preacher curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دستگاه لاری"
         },
         {
-          "id": "b2_tue_10",
-          "order": 10,
+          "id": "b3_tue_09",
+          "order": 9,
           "name": "مچ معکوس سیمکش",
           "muscleGroup": "ساعد",
           "sets": 2,
@@ -980,22 +952,51 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "میله صاف کوتاه",
           "guideId": "cable-reverse-wrist-curl",
           "volumeCredits": {
             "forearmsAndGripDirect": 2
           },
-          "note": "",
+          "note": "ساعد ثابت و کف دست رو به پایین؛ فقط پشت دست را بالا بیاور؛ وزنه سبک و کنترل‌شده.",
           "englishName": "Cable Reverse Wrist Curl",
           "searchAliases": [
             "Cable Reverse Wrist Curl",
             "cable reverse wrist curl"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "میله صاف کوتاه"
         },
         {
-          "id": "b2_tue_11",
+          "id": "b3_tue_10",
+          "order": 10,
+          "name": "چرخش ساعد با دمبل سبک",
+          "muscleGroup": "ساعد و مچ",
+          "sets": 2,
+          "reps": "12–15 هر جهت",
+          "restSec": "60",
+          "targetRir": "2–3",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "forearm-pronation-supination",
+          "volumeCredits": {
+            "forearmsAndGripDirect": 2
+          },
+          "note": "آرنج کنار بدن و ساعد حمایت‌شده؛ کف دست را آرام رو به بالا و پایین بچرخان؛ مچ را نشکن و وزنه را سبک نگه دار.",
+          "englishName": "Forearm Pronation Supination",
+          "searchAliases": [
+            "forearm pronation supination"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "دمبل سبک یا چکش؛ آرنج تکیه‌داده"
+        },
+        {
+          "id": "b3_tue_11",
           "order": 11,
           "name": "کرانچ سیمکش زانوزده",
           "muscleGroup": "شکم",
@@ -1010,26 +1011,26 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "طناب",
           "guideId": "cable-kneeling-crunch",
           "volumeCredits": {
             "absAndObliques": 2
           },
-          "note": "",
+          "note": "دنده‌ها را به سمت لگن جمع کن؛ حرکت از تنه باشد نه کشیدن دست‌ها؛ لگن تقریباً ثابت.",
           "englishName": "Kneeling Cable Crunch",
           "searchAliases": [
             "Kneeling Cable Crunch",
             "cable kneeling crunch"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "طناب"
         },
         {
-          "id": "b2_tue_12",
+          "id": "b3_tue_12",
           "order": 12,
-          "name": "پالوف پرس",
+          "name": "پالوف پرس سیمکش",
           "muscleGroup": "میان‌تنه؛ ضدچرخش",
-          "sets": 1,
+          "sets": 2,
           "reps": "10–15 هر سمت",
           "restSec": "60–75",
           "targetRir": "2–3",
@@ -1040,7 +1041,17 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دسته D",
+          "guideId": "cable-pallof-press",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "note": "دسته جلوی سینه؛ دست‌ها را جلو ببر و اجازه نده تنه به سمت کابل بچرخد. یک دور دو سمت یک ست است.",
+          "englishName": "Pallof Press",
+          "searchAliases": [
+            "Pallof Press",
+            "cable pallof press"
+          ],
+          "legacyOnly": false,
           "unilateral": {
             "mode": "paired",
             "sides": [
@@ -1051,20 +1062,11 @@
             "allowSharedValue": true,
             "allowSideNotes": true
           },
-          "note": "یک ست برای هر سمت اجرا شود؛ یک دور کامل چپ و راست در مجموع برنامه یک ست حساب می‌شود.",
-          "guideId": "cable-pallof-press",
-          "volumeCredits": {
-            "absAndObliques": 1
-          },
-          "englishName": "Pallof Press",
-          "searchAliases": [
-            "Pallof Press",
-            "cable pallof press"
-          ],
-          "legacyOnly": false
+          "attachment": "دسته D؛ هر دو سمت"
         }
       ],
-      "sessionCode": "B"
+      "sessionCode": "B",
+      "estimatedMinutes": "۸۵ تا ۱۰۰ دقیقه"
     },
     {
       "id": "wed",
@@ -1085,9 +1087,9 @@
       "id": "fri",
       "dayFa": "جمعه",
       "type": "training",
-      "title": "A — سرشانه، سینه، پشت مکمل و پشت‌بازو",
+      "title": "A — سرشانه، سینه، زیربغل و میان‌تنه",
       "subtitle": "Block 2 — CBA • ترتیب حرکات مطابق برنامه مرجع",
-      "totalWorkingSets": 24,
+      "totalWorkingSets": 25,
       "warmup": [
         {
           "id": "b2-warm-fri-cardio",
@@ -1120,7 +1122,7 @@
       ],
       "exercises": [
         {
-          "id": "b2_fri_01",
+          "id": "b3_fri_01",
           "order": 1,
           "name": "پرس سرشانه دستگاه همگرا با گریپ خنثی یا نیمه‌خنثی",
           "muscleGroup": "سرشانه",
@@ -1136,8 +1138,10 @@
             "allowNotes": true
           },
           "guideId": "machine-shoulder-press",
-          "volumeCredits": {},
-          "note": "اولین حرکت قطعی جمعه. فقط دستگاه همگرای مناسب با گیرش خنثی/نیمه‌خنثی؛ دستگاه قدیمی علامت‌دار جایگزین خودکار نیست. در نبود آن، جایگزین دردآزاد مثل اسمیت نشسته یا دمبل باید بررسی و تأیید شود. رکورد گزارش‌شده ۲۵ کیلو با ۱۲،۱۰،۱۰ فقط برای همان دستگاه و تنظیمات معتبر است. با گزگز انگشت کوچک، ضعف ناگهانی غیرعادی یا درد عصبی، حرکت محرک قطع و حضوری بررسی شود.",
+          "volumeCredits": {
+            "shouldersDirect": 3
+          },
+          "note": "مچ در امتداد ساعد؛ کمر روی پشتی؛ گزگز انگشت کوچک یا درد عصبی یعنی همان ست را متوقف کن.",
           "englishName": "Converging Shoulder Press",
           "searchAliases": [
             "Converging Shoulder Press",
@@ -1145,12 +1149,10 @@
           ],
           "legacyOnly": false,
           "unilateral": false,
-          "variant": "converging-neutral-or-semi-neutral-grip",
-          "attachment": "دستگاه همگرا؛ گیرش خنثی یا نیمه‌خنثی",
-          "mediaVariantNote": "این رسانه راهنمای عمومی پرس سرشانه دستگاه است؛ همگرا بودن و گیرش دستگاه باشگاه باید حضوری بررسی شود."
+          "attachment": "دستگاه همگرا؛ گیرش خنثی یا نیمه‌خنثی"
         },
         {
-          "id": "b2_fri_02",
+          "id": "b3_fri_02",
           "order": 2,
           "name": "پرس بالاسینه دمبل",
           "muscleGroup": "سینه بالایی",
@@ -1165,56 +1167,85 @@
             "showRir": true,
             "allowNotes": true
           },
-          "note": "مچ تقریباً هم‌راستای ساعد، دسته نزدیک پایه کف دست؛ فرم و دامنه بدون درد بر افزایش بار اولویت دارند.",
           "guideId": "incline-dumbbell-press",
           "volumeCredits": {
             "chestDirect": 3
           },
+          "note": "مچ صاف و دسته نزدیک پایه کف دست؛ دمبل‌ها کنار بالای سینه پایین بیایند. در صورت شکستن مچ، بار را کم کن یا دستگاه را جایگزین کن.",
           "englishName": "Incline Dumbbell Press",
           "searchAliases": [
             "Incline Dumbbell Press",
             "incline dumbbell press"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دمبل؛ نیمکت شیب متوسط"
         },
         {
-          "guideId": "seated-side-lateral-raise",
-          "mediaSourceId": "Seated_Side_Lateral_Raise",
+          "id": "b3_fri_03",
+          "order": 3,
           "name": "نشر جانب دمبل نشسته",
           "muscleGroup": "سرشانه کناری",
           "sets": 4,
           "reps": "12–20",
           "restSec": "90–120",
-          "attachment": "دو دمبل و نیمکت",
-          "inputType": "reps",
           "targetRir": "1–2",
-          "libraryVersion": "2026-08-23-complete-media",
-          "id": "b2_fri_03",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "seated-side-lateral-raise",
+          "volumeCredits": {
+            "lateralDeltsDirect": 4
+          },
+          "note": "نشسته و بدون تاب؛ آرنج‌ها را تا نزدیک سطح شانه بالا ببر و شانه را بالا نینداز.",
           "englishName": "Seated Dumbbell Lateral Raise",
           "searchAliases": [
             "Seated Dumbbell Lateral Raise",
             "seated side lateral raise"
           ],
-          "order": 3,
           "legacyOnly": false,
-          "note": "حتماً دمبل نشسته؛ یکشنبه نسخه سیمکش داریم. بدون تاب‌دادن بدن و بالاانداختن عمدی شانه.",
+          "unilateral": false,
+          "attachment": "دو دمبل و نیمکت"
+        },
+        {
+          "id": "b3_fri_04",
+          "order": 4,
+          "name": "پول‌اور سیمکش دست صاف با طناب",
+          "muscleGroup": "زیربغل",
+          "sets": 2,
+          "reps": "10–15",
+          "restSec": "90",
+          "targetRir": "1–2",
+          "inputType": "reps",
           "tracking": {
             "showWeight": true,
             "showReps": true,
             "showRir": true,
             "allowNotes": true
           },
-          "unilateral": false,
+          "guideId": "straight-arm-rope-pulldown",
           "volumeCredits": {
-            "lateralDeltsDirect": 4
-          }
+            "backAndLatsDirect": 2
+          },
+          "note": "آرنج کمی خم و ثابت؛ دسته را از جلوی صورت تا کنار ران پایین بیاور؛ کمر را گود نکن.",
+          "englishName": "Straight-Arm Cable Pulldown",
+          "searchAliases": [
+            "Straight-Arm Cable Pulldown",
+            "straight arm rope pulldown"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "طناب؛ قرقره بالا"
         },
         {
-          "id": "b2_fri_04",
-          "order": 4,
-          "name": "زیربغل دستگاه H با تکیه‌گاه سینه",
-          "muscleGroup": "پشت؛ ضخامت",
+          "id": "b3_fri_05",
+          "order": 5,
+          "name": "پرس سینه دستگاه نشسته",
+          "muscleGroup": "سینه",
           "sets": 3,
           "reps": "8–12",
           "restSec": "120–150",
@@ -1226,50 +1257,22 @@
             "showRir": true,
             "allowNotes": true
           },
-          "guideId": "chest-supported-h-row",
-          "volumeCredits": {
-            "backAndLatsDirect": 3
-          },
-          "note": "سینه روی تکیه‌گاه؛ حرکت با آرنج و کنترل کتف، بدون تاب‌دادن کمر. یکشنبه اولین حرکت و اولویت ضخامت و قدرت پشت بالایی است.",
-          "englishName": "Chest-Supported H-Row",
-          "searchAliases": [
-            "Chest-Supported H-Row",
-            "chest supported h row"
-          ],
-          "legacyOnly": false,
-          "unilateral": false
-        },
-        {
-          "id": "b2_fri_05",
-          "name": "پرس سینه دستگاه نشسته",
           "guideId": "forward-machine-chest-press",
-          "muscleGroup": "سینه",
-          "inputType": "reps",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
+          "volumeCredits": {
+            "chestDirect": 3
           },
+          "note": "دسته‌ها مقابل وسط سینه؛ کتف‌ها کنترل‌شده؛ مسیر بدون درد و بدون جلوآمدن شانه.",
           "englishName": "Seated Machine Chest Press",
           "searchAliases": [
             "Seated Machine Chest Press",
             "forward machine chest press"
           ],
-          "sets": 3,
-          "order": 5,
-          "reps": "8–12",
-          "restSec": "120–150",
-          "targetRir": "1–2",
           "legacyOnly": false,
-          "note": "نوع دستگاه نشسته است، نه خوابیده. ارتفاع صندلی و مسیر دست متناسب با شانه تنظیم شود.",
           "unilateral": false,
-          "volumeCredits": {
-            "chestDirect": 3
-          }
+          "attachment": "دستگاه پرس سینه نشسته"
         },
         {
-          "id": "b2_fri_06",
+          "id": "b3_fri_06",
           "order": 6,
           "name": "کراس‌اور سیمکش بالا به پایین",
           "muscleGroup": "سینه",
@@ -1284,27 +1287,27 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "دو دسته D",
           "guideId": "high-to-low-cable-crossover",
           "volumeCredits": {
             "chestDirect": 2
           },
+          "note": "قرقره‌ها بالا؛ دست‌ها را به سمت پایین سینه جمع کن؛ تنه ثابت و برگشت آهسته.",
           "englishName": "High-to-Low Cable Crossover",
           "searchAliases": [
             "High-to-Low Cable Crossover",
             "high to low cable crossover"
           ],
           "legacyOnly": false,
-          "note": "دو دسته D؛ حرکت حفظ شده است. تنه ثابت و دست‌ها کنترل‌شده در پایین جلوی بدن نزدیک شوند.",
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دسته D"
         },
         {
-          "id": "b2_fri_07",
+          "id": "b3_fri_07",
           "order": 7,
-          "name": "فلای سینه دستگاه",
-          "muscleGroup": "سینه",
+          "name": "فلای معکوس سیمکش ایستاده",
+          "muscleGroup": "سرشانه خلفی",
           "sets": 2,
-          "reps": "10–15",
+          "reps": "12–20",
           "restSec": "75–90",
           "targetRir": "1–2",
           "inputType": "reps",
@@ -1314,51 +1317,22 @@
             "showRir": true,
             "allowNotes": true
           },
-          "guideId": "pec-deck-fly",
-          "volumeCredits": {
-            "chestDirect": 2
-          },
-          "note": "فقط بدون درد کتف. با درد، دو ست انجام نشود و هیچ ست جبرانی خودکار اضافه نشود.",
-          "englishName": "Pec Deck Fly",
-          "searchAliases": [
-            "Pec Deck Fly",
-            "pec deck fly"
-          ],
-          "legacyOnly": false,
-          "unilateral": false
-        },
-        {
-          "id": "b2_fri_08",
-          "order": 8,
-          "name": "فلای‌بک دستگاه",
-          "muscleGroup": "سرشانه خلفی",
-          "sets": 2,
-          "reps": "12–20",
-          "restSec": "75–90",
-          "targetRir": "2–3",
-          "inputType": "reps",
-          "tracking": {
-            "showWeight": true,
-            "showReps": true,
-            "showRir": true,
-            "allowNotes": true
-          },
-          "guideId": "reverse-pec-deck",
+          "guideId": "cable-rear-delt-fly",
           "volumeCredits": {
             "rearDeltsAndScapularControlDirect": 2
           },
-          "note": "کنترل‌شده و بدون رکوردگیری سنگین؛ پشت‌شانه یکشنبه و جمعه تمرین دارد.",
-          "englishName": "Reverse Pec Deck",
+          "note": "تنه ثابت و آرنج کمی خم؛ دست‌ها را به طرفین باز کن؛ دامنه بدون درد و بدون بالاانداختن شانه.",
+          "englishName": "cable-rear-delt-fly",
           "searchAliases": [
-            "Reverse Pec Deck",
-            "reverse pec deck"
+            "cable rear delt fly"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "دو دسته D یا گرفتن کابل‌ها"
         },
         {
-          "id": "b2_fri_09",
-          "order": 9,
+          "id": "b3_fri_08",
+          "order": 8,
           "name": "پشت‌بازو طناب بالای سر",
           "muscleGroup": "پشت‌بازو؛ تأکید سر بلند",
           "sets": 2,
@@ -1372,20 +1346,86 @@
             "showRir": true,
             "allowNotes": true
           },
-          "attachment": "طناب",
           "guideId": "overhead-rope-triceps-extension",
           "volumeCredits": {
-            "tricepsDirect": 2,
             "tricepsLongHeadOverhead": 2
           },
-          "note": "",
+          "note": "آرنج‌ها کنار سر و ثابت؛ در برگشت طناب را پشت سر ببر تا کشش کنترل‌شده بگیری.",
           "englishName": "Overhead Rope Triceps Extension",
           "searchAliases": [
             "Overhead Rope Triceps Extension",
             "overhead rope triceps extension"
           ],
           "legacyOnly": false,
-          "unilateral": false
+          "unilateral": false,
+          "attachment": "طناب؛ پشت به سیمکش"
+        },
+        {
+          "id": "b3_fri_09",
+          "order": 9,
+          "name": "ریورس کرانچ",
+          "muscleGroup": "میان‌تنه",
+          "sets": 2,
+          "reps": "12–20",
+          "restSec": "60",
+          "targetRir": "1–2 فنی",
+          "inputType": "bodyweight",
+          "tracking": {
+            "showWeight": false,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "reverse-crunch",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "note": "با انقباض شکم لگن را کمی از نیمکت جدا کن؛ پاها را تاب نده و کمر را ناگهانی بلند نکن.",
+          "englishName": "Reverse Crunch",
+          "searchAliases": [
+            "reverse crunch"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "بدون وزنه"
+        },
+        {
+          "id": "b3_fri_10",
+          "order": 10,
+          "name": "وودچاپر سیمکش از بالا به پایین",
+          "muscleGroup": "میان‌تنه",
+          "sets": 2,
+          "reps": "10–15 هر سمت",
+          "restSec": "60",
+          "targetRir": "کنترل‌شده",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "high-to-low-cable-woodchopper",
+          "volumeCredits": {
+            "absAndObliques": 2
+          },
+          "note": "از کنار دستگاه، دسته را مورب به سمت لگن مخالف بکش؛ شکم سفت و چرخش کنترل‌شده؛ یک دور دو سمت یک ست است.",
+          "englishName": "High To Low Cable Woodchopper",
+          "searchAliases": [
+            "high to low cable woodchopper"
+          ],
+          "legacyOnly": false,
+          "unilateral": {
+            "mode": "paired",
+            "sides": [
+              "left",
+              "right"
+            ],
+            "workingSetCounting": "pair_is_one_set",
+            "allowSharedValue": true,
+            "allowSideNotes": true
+          },
+          "attachment": "دسته D تک‌دست؛ طناب جایگزین"
         }
       ],
       "sessionCode": "A",
@@ -1439,7 +1479,8 @@
           "note": "فقط جمعه بعد از آخرین ست وزنه. هدف نهایی ۲۵–۳۰ دقیقه؛ ساختار ۳۰ دقیقه‌ای ۵ دقیقه آرام + ۲۰ دقیقه متوسط + ۵ دقیقه سردکردن. در بخش اصلی باید بتوانی جمله کامل بگویی. دور رکاب ۷۰–۸۵ فقط در صورت راحتی. بدون HIIT، اسپرینت یا اینتروال سنگین. هفته اول ۱۵–۲۰، دوم ۲۰–۲۵، سوم به بعد ۲۵–۳۰ دقیقه؛ افزایش فقط با تحمل مناسب و بدون تشدید علائم روز بعد.",
           "alternativeNote": "اگر دوچرخه زانو یا کشاله را اذیت کرد، تردمیل صاف با شدت قابل‌تحمل؛ اگر هیچ‌کدام قابل‌تحمل نبودند، هوازی دستگاهی فعلاً متوقف شود."
         }
-      ]
+      ],
+      "estimatedMinutes": "۹۰ تا ۱۰۵ دقیقه"
     }
   ],
   "postureRoutine": {
@@ -1476,13 +1517,14 @@
       }
     ]
   },
-  "effectiveWeekKey": "2026-10-31",
+  "effectiveWeekKey": "2026-11-07",
   "trainingNotes": {
-    "block": "Block 2 — CBA: یکشنبه C، سه‌شنبه B، جمعه A. تعداد ست کاری ۲۶، ۲۶ و ۲۴؛ هوازی فقط بعد از وزنه جمعه و جدا از درصد ست‌ها.",
-    "adaptation": "هفته اول سازگاری: بیشتر حرکات با حدود ۲–۳ تکرار ذخیره؛ سپس اغلب ۱–۲، به‌جز حرکات با RIR بالاتر. ناتوانی کامل اجباری نیست. پس از ۴–۶ هفته اجرای پایدار، حجم با گزارش واقعی بازبینی شود.",
-    "safety": "هیچ حرکت دردناک یا تحریک‌کننده علائم عصبی اجباری نیست. در صورت درد باقی‌مانده کشاله، تمرین پایین‌تنه سنگین اجرا نشود؛ ارزیابی و بازگشت تدریجی لازم است. هیچ جایگزین یا ست جبرانی خودکار اعمال نمی‌شود."
+    "block": "Block 3 — CBA: یکشنبه C، سه‌شنبه B، جمعه A؛ ۲۸، ۲۶ و ۲۵ ست کاری؛ مجموع ۷۹. هوازی Zone 2 فقط پس از وزنه جمعه و خارج از درصد ست‌ها.",
+    "adaptation": "پس از وقفه یک‌ماهه، دو هفته اول ست‌های حرکات چندستی را با حدود ۳ تکرار ذخیره و در صورت نیاز یک ست کمتر اجرا کن؛ سپس در صورت ریکاوری و اجرای بی‌علامت به حجم کامل برگرد. RIR هدف در همه ست‌ها اجباری نیست و کیفیت فرم اولویت دارد.",
+    "safety": "هاک اسکوات با دامنه و فرم بدون درد اجرا شود. در پرس‌ها مچ را در امتداد ساعد نگه دار؛ با بازگشت گزگز/سوزش انگشت کوچک، حرکت محرک را متوقف کن. RDL در این نسخه نیست؛ پول‌ترو با وجود تفاوت محرک همسترینگ با RDL به‌عنوان الگوی لگن انتخاب شده است. هر درد مفصلی یا علامت عصبی ماندگار نیازمند توقف حرکت و ارزیابی است.",
+    "cardio": "دوچرخه ثابت Zone 2 جمعه بعد از وزنه؛ ۲۵–۳۰ دقیقه در شدت گفت‌وگوپذیر، فقط در صورت تحمل زانو و کشاله. فعالیت هوازی ست کاری یا درصد تکمیل محسوب نمی‌شود."
   },
-  "blockId": "block-2-cba",
-  "blockName": "Block 2 — CBA",
-  "reviewAfterWeeks": "۴–۶ هفته اجرای پایدار"
+  "blockId": "block-3-cba",
+  "blockName": "Block 3 — اولویت سرشانه، پشت و بازو",
+  "reviewAfterWeeks": "۴–۶ هفته"
 }
