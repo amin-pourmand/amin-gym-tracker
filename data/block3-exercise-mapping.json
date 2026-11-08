@@ -1,8 +1,8 @@
 {
-  "programVersion": "2026-11-07-cba-79",
-  "effectiveWeekKey": "2026-11-07",
-  "instanceCount": 35,
-  "workingSets": 79,
+  "programVersion": "2026-11-14-cba-82",
+  "effectiveWeekKey": "2026-11-14",
+  "instanceCount": 36,
+  "workingSets": 82,
   "days": [
     {
       "id": "sun",
@@ -194,7 +194,7 @@
       "id": "tue",
       "dayFa": "سه‌شنبه",
       "sessionCode": "B",
-      "totalWorkingSets": 26,
+      "totalWorkingSets": 29,
       "exercises": [
         {
           "id": "b3_tue_01",
@@ -225,8 +225,22 @@
           "unilateral": false
         },
         {
-          "id": "b3_tue_03",
+          "id": "b3_tue_13",
           "order": 3,
+          "name": "پرس پا دستگاه",
+          "guideId": "seated-leg-press",
+          "sets": 3,
+          "reps": "10–15",
+          "restSec": "120–150",
+          "attachment": "دستگاه پرس پا",
+          "volumeCredits": {
+            "quadricepsDirect": 3
+          },
+          "unilateral": false
+        },
+        {
+          "id": "b3_tue_03",
+          "order": 4,
           "name": "جلوپا دستگاه",
           "guideId": "leg-extension",
           "sets": 2,
@@ -240,7 +254,7 @@
         },
         {
           "id": "b3_tue_04",
-          "order": 4,
+          "order": 5,
           "name": "پشت‌پا دستگاه نشسته",
           "guideId": "seated-leg-curl",
           "sets": 3,
@@ -254,7 +268,7 @@
         },
         {
           "id": "b3_tue_05",
-          "order": 5,
+          "order": 6,
           "name": "پول‌ترو سیمکش",
           "guideId": "cable-pull-through",
           "sets": 2,
@@ -266,7 +280,7 @@
         },
         {
           "id": "b3_tue_06",
-          "order": 6,
+          "order": 7,
           "name": "ساق روی پرس پا",
           "guideId": "leg-press-calf-raise",
           "sets": 2,
@@ -280,7 +294,7 @@
         },
         {
           "id": "b3_tue_07",
-          "order": 7,
+          "order": 8,
           "name": "ساق نشسته دستگاه",
           "guideId": "seated-calf-raise",
           "sets": 2,
@@ -294,7 +308,7 @@
         },
         {
           "id": "b3_tue_08",
-          "order": 8,
+          "order": 9,
           "name": "جلو بازو لاری دستگاه",
           "guideId": "machine-preacher-curl",
           "sets": 2,
@@ -308,7 +322,7 @@
         },
         {
           "id": "b3_tue_09",
-          "order": 9,
+          "order": 10,
           "name": "مچ معکوس سیمکش",
           "guideId": "cable-reverse-wrist-curl",
           "sets": 2,
@@ -322,7 +336,7 @@
         },
         {
           "id": "b3_tue_10",
-          "order": 10,
+          "order": 11,
           "name": "چرخش ساعد با دمبل سبک",
           "guideId": "forearm-pronation-supination",
           "sets": 2,
@@ -336,7 +350,7 @@
         },
         {
           "id": "b3_tue_11",
-          "order": 11,
+          "order": 12,
           "name": "کرانچ سیمکش زانوزده",
           "guideId": "cable-kneeling-crunch",
           "sets": 2,
@@ -350,7 +364,7 @@
         },
         {
           "id": "b3_tue_12",
-          "order": 12,
+          "order": 13,
           "name": "پالوف پرس سیمکش",
           "guideId": "cable-pallof-press",
           "sets": 2,

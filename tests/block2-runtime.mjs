@@ -50,13 +50,14 @@ assert.equal(cardioSaved['block2-friday-cardio'].minutes,'18');assert.equal(card
 await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('[data-activity-field="minutes"]').inputValue(),'18');
 await page.evaluate(()=>window.openExercisePicker());await page.locator('#exerciseSearch').fill('Seated Leg Curl');assert.match(await page.locator('#exercisePickerList').innerText(),/پشت‌پا دستگاه نشسته/);await page.evaluate(()=>window.closeExercisePicker());
 await page.evaluate(()=>window.openWeek('2026-11-07'));assert.equal(await page.evaluate(()=>eval('weekStats().total')),79);await page.evaluate(()=>window.openDay('fri'));assert.equal(await page.locator('[data-activity-field="minutes"]').inputValue(),'');assert.equal(await page.evaluate(()=>eval('weekStats().done')),0);
+await page.evaluate(()=>window.openWeek('2026-11-14'));assert.equal(await page.evaluate(()=>eval('weekStats().total')),82);await page.evaluate(()=>window.openDay('tue'));assert.equal(await page.locator('.ex').count(),13);assert.match(await page.locator('.ex').nth(2).innerText(),/پرس پا دستگاه/);
 const upgrades=await page.evaluate(()=>eval(`(()=>{
  const original=state,p=PROGRAM_VERSIONS['2026-10-17-three-day-74'],week='2026-11-14';
  const snapshot={schemaVersion:1,weekKey:week,programVersion:p.programVersion,days:Object.fromEntries(workoutsFromProgram(p).filter(w=>!w.optional).map(w=>[w.id,{exercises:w.exercises.map(cloneExercise)}]))};
  state=normalizeState({history:[],active:{},weekSnapshots:{[week]:snapshot},selectedWeekKey:week});upgradeUntouchedWeeks();const empty=ensureWeekSnapshot(week).programVersion;
  const custom=structuredClone(snapshot);custom.days.sun.exercises[0].reps='99';state=normalizeState({history:[],active:{},weekSnapshots:{[week]:custom},selectedWeekKey:week});upgradeUntouchedWeeks();const customReps=ensureWeekSnapshot(week).days.sun.exercises[0].reps;
  state=original;return{empty,customReps};
-})()`));assert.equal(upgrades.empty,'2026-11-07-cba-79');assert.equal(upgrades.customReps,'99');
+})()`));assert.equal(upgrades.empty,'2026-11-14-cba-82');assert.equal(upgrades.customReps,'99');
 await page.evaluate(()=>window.openWeek('2026-10-31'));await page.evaluate(()=>window.openDay('fri'));
 await page.screenshot({path:path.join(root,'..','..','outputs','block2-friday-mobile.png'),fullPage:true});
 await page.locator('.cardio-panel').screenshot({path:path.join(root,'..','..','outputs','block2-cardio-mobile.png')});

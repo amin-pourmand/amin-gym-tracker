@@ -1,12 +1,12 @@
 importScripts('./media-cache-list.js');
 
-const CACHE_NAME = 'amino-v19-block3-cba';
+const CACHE_NAME = 'amino-v20-block3-leg-press';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './final-data.js',
-  './final-data.js?v=20261107-cba-79',
+  './final-data.js?v=20261114-cba-82',
   './exercise-library.js',
   './exercise-library-expanded.js',
   './media-manifest.js',
@@ -14,6 +14,7 @@ const APP_SHELL = [
   './media-cache-list.js',
   './data/workout-program-final.json',
   './data/workout-program-block2-2026-10-31.json',
+  './data/workout-program-block3-2026-11-07.json',
   './data/block3-exercise-mapping.json',
   './data/workout-program-legacy-2026-07.json',
   './data/workout-program-block1-2026-10-17.json',

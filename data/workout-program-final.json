@@ -1,6 +1,6 @@
 {
   "schemaVersion": 6,
-  "programVersion": "2026-11-07-cba-79",
+  "programVersion": "2026-11-14-cba-82",
   "rules": {
     "trainingDayIds": [
       "sun",
@@ -17,13 +17,13 @@
     "warmupsCountTowardWorkingSets": false,
     "postureRoutineCountsTowardWorkingSets": false,
     "postureRoutineCountsTowardCompletion": false,
-    "expectedWeeklyWorkingSets": 79,
+    "expectedWeeklyWorkingSets": 82,
     "weeklyTotalMustBeDerivedFromExercises": true,
     "oneSidedWorkingSetRule": "یک دور کامل چپ و راست، یک ست کاری محسوب می‌شود.",
     "weekCompletion": {
       "basis": "completed_working_sets",
       "defaultDenominatorSource": "selected_week_snapshot",
-      "defaultProgramDenominator": 79,
+      "defaultProgramDenominator": 82,
       "excludeWarmups": true,
       "excludeRestDays": true,
       "excludePostureRoutine": true,
@@ -164,7 +164,7 @@
     "bicepsBrachialisBrachioradialisDirect": 8,
     "forearmsAndGripDirect": 7,
     "absAndObliques": 8,
-    "quadricepsDirect": 5,
+    "quadricepsDirect": 8,
     "hamstringsDirect": 3,
     "glutesDirect": 2,
     "calvesDirect": 4,
@@ -173,16 +173,16 @@
   "validation": {
     "expectedWorkingSetsByDay": {
       "sun": 28,
-      "tue": 26,
+      "tue": 29,
       "fri": 25
     },
     "expectedExerciseCountByDay": {
       "sun": 13,
-      "tue": 12,
+      "tue": 13,
       "fri": 10
     },
-    "expectedWeeklyWorkingSets": 79,
-    "expectedWeeklyExerciseCount": 35,
+    "expectedWeeklyWorkingSets": 82,
+    "expectedWeeklyExerciseCount": 36,
     "calculateFrom": "days[type=training].exercises[].sets",
     "cardioExcluded": true,
     "volumeCreditSource": "exercises[].volumeCredits",
@@ -668,7 +668,7 @@
       "type": "training",
       "title": "B — سینه، پا، ساعد و میان‌تنه",
       "subtitle": "Block 2 — CBA • ترتیب حرکات مطابق برنامه مرجع",
-      "totalWorkingSets": 26,
+      "totalWorkingSets": 29,
       "warmup": [
         {
           "id": "b2-warm-tue-cardio",
@@ -760,8 +760,38 @@
           "attachment": "دستگاه هاک‌اسکوات"
         },
         {
-          "id": "b3_tue_03",
+          "id": "b3_tue_13",
           "order": 3,
+          "name": "پرس پا دستگاه",
+          "muscleGroup": "چهارسر و پایین‌تنه",
+          "sets": 3,
+          "reps": "10–15",
+          "restSec": "120–150",
+          "targetRir": "2–3",
+          "inputType": "reps",
+          "tracking": {
+            "showWeight": true,
+            "showReps": true,
+            "showRir": true,
+            "allowNotes": true
+          },
+          "guideId": "seated-leg-press",
+          "volumeCredits": {
+            "quadricepsDirect": 3
+          },
+          "note": "پاها تقریباً به عرض شانه و زانوها هم‌جهت پنجه‌ها؛ تا جایی پایین برو که لگن از پشتی جدا یا کمر گرد نشود. با کنترل فشار بده و زانو را بالا قفل نکن؛ دامنه و وزنه بدون درد زانو، کشاله یا کمر انتخاب شود.",
+          "englishName": "Seated Leg Press",
+          "searchAliases": [
+            "Seated Leg Press",
+            "leg press"
+          ],
+          "legacyOnly": false,
+          "unilateral": false,
+          "attachment": "دستگاه پرس پا"
+        },
+        {
+          "id": "b3_tue_03",
+          "order": 4,
           "name": "جلوپا دستگاه",
           "muscleGroup": "چهارسر",
           "sets": 2,
@@ -791,7 +821,7 @@
         },
         {
           "id": "b3_tue_04",
-          "order": 4,
+          "order": 5,
           "name": "پشت‌پا دستگاه نشسته",
           "muscleGroup": "همسترینگ",
           "sets": 3,
@@ -821,7 +851,7 @@
         },
         {
           "id": "b3_tue_05",
-          "order": 5,
+          "order": 6,
           "name": "پول‌ترو سیمکش",
           "muscleGroup": "باسن و همسترینگ",
           "sets": 2,
@@ -849,7 +879,7 @@
         },
         {
           "id": "b3_tue_06",
-          "order": 6,
+          "order": 7,
           "name": "ساق روی پرس پا",
           "muscleGroup": "ساق",
           "sets": 2,
@@ -878,7 +908,7 @@
         },
         {
           "id": "b3_tue_07",
-          "order": 7,
+          "order": 8,
           "name": "ساق نشسته دستگاه",
           "muscleGroup": "ساق",
           "sets": 2,
@@ -908,7 +938,7 @@
         },
         {
           "id": "b3_tue_08",
-          "order": 8,
+          "order": 9,
           "name": "جلو بازو لاری دستگاه",
           "muscleGroup": "جلو بازو",
           "sets": 2,
@@ -938,7 +968,7 @@
         },
         {
           "id": "b3_tue_09",
-          "order": 9,
+          "order": 10,
           "name": "مچ معکوس سیمکش",
           "muscleGroup": "ساعد",
           "sets": 2,
@@ -968,7 +998,7 @@
         },
         {
           "id": "b3_tue_10",
-          "order": 10,
+          "order": 11,
           "name": "چرخش ساعد با دمبل سبک",
           "muscleGroup": "ساعد و مچ",
           "sets": 2,
@@ -997,7 +1027,7 @@
         },
         {
           "id": "b3_tue_11",
-          "order": 11,
+          "order": 12,
           "name": "کرانچ سیمکش زانوزده",
           "muscleGroup": "شکم",
           "sets": 2,
@@ -1027,7 +1057,7 @@
         },
         {
           "id": "b3_tue_12",
-          "order": 12,
+          "order": 13,
           "name": "پالوف پرس سیمکش",
           "muscleGroup": "میان‌تنه؛ ضدچرخش",
           "sets": 2,
@@ -1066,7 +1096,7 @@
         }
       ],
       "sessionCode": "B",
-      "estimatedMinutes": "۸۵ تا ۱۰۰ دقیقه"
+      "estimatedMinutes": "۹۰ تا ۱۰۵ دقیقه"
     },
     {
       "id": "wed",
@@ -1517,14 +1547,14 @@
       }
     ]
   },
-  "effectiveWeekKey": "2026-11-07",
+  "effectiveWeekKey": "2026-11-14",
   "trainingNotes": {
-    "block": "Block 3 — CBA: یکشنبه C، سه‌شنبه B، جمعه A؛ ۲۸، ۲۶ و ۲۵ ست کاری؛ مجموع ۷۹. هوازی Zone 2 فقط پس از وزنه جمعه و خارج از درصد ست‌ها.",
+    "block": "Block 3 — CBA: یکشنبه C، سه‌شنبه B، جمعه A؛ ۲۸، ۲۸ و ۲۵ ست کاری؛ مجموع ۸۱. هوازی Zone 2 فقط پس از وزنه جمعه و خارج از درصد ست‌ها.",
     "adaptation": "پس از وقفه یک‌ماهه، دو هفته اول ست‌های حرکات چندستی را با حدود ۳ تکرار ذخیره و در صورت نیاز یک ست کمتر اجرا کن؛ سپس در صورت ریکاوری و اجرای بی‌علامت به حجم کامل برگرد. RIR هدف در همه ست‌ها اجباری نیست و کیفیت فرم اولویت دارد.",
     "safety": "هاک اسکوات با دامنه و فرم بدون درد اجرا شود. در پرس‌ها مچ را در امتداد ساعد نگه دار؛ با بازگشت گزگز/سوزش انگشت کوچک، حرکت محرک را متوقف کن. RDL در این نسخه نیست؛ پول‌ترو با وجود تفاوت محرک همسترینگ با RDL به‌عنوان الگوی لگن انتخاب شده است. هر درد مفصلی یا علامت عصبی ماندگار نیازمند توقف حرکت و ارزیابی است.",
     "cardio": "دوچرخه ثابت Zone 2 جمعه بعد از وزنه؛ ۲۵–۳۰ دقیقه در شدت گفت‌وگوپذیر، فقط در صورت تحمل زانو و کشاله. فعالیت هوازی ست کاری یا درصد تکمیل محسوب نمی‌شود."
   },
-  "blockId": "block-3-cba",
-  "blockName": "Block 3 — اولویت سرشانه، پشت و بازو",
+  "blockId": "block-3-cba-leg-press",
+  "blockName": "Block 3 — CBA با پرس پا",
   "reviewAfterWeeks": "۴–۶ هفته"
 }
